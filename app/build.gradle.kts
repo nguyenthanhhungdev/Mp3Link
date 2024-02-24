@@ -62,7 +62,9 @@ dependencies {
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("com.google.android.gms:play-services-base:18.3.0")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
-
+    implementation ("com.google.guava:guava:24.1-jre")
+    implementation("com.google.api-client:google-api-client-android:1.23.0")
+    implementation("com.google.apis:google-api-services-drive:v3-rev136-1.25.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
