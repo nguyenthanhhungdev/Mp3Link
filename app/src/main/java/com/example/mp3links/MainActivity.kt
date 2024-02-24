@@ -1,8 +1,13 @@
 package com.example.mp3links
 
+import android.app.Activity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -31,11 +36,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
 import com.example.mp3links.ui.theme.MP3LinksTheme
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.tasks.Task
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,10 +56,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+
                     MP3LinksScreen()
+
                 }
             }
         }
+
     }
 }
 
@@ -64,7 +76,7 @@ fun MP3LinksScreen() {
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.primary
                 ),
-                title = { Text("MP3 Links") },
+                title = { Text("MP3 Drive") },
                 modifier = Modifier.fillMaxWidth()
             )
         },
@@ -85,15 +97,32 @@ fun MP3LinksScreen() {
                 val options = listOf("Option 1", "Option 2", "Option 3", "Option 4", "Option 5")
                 var isExpanded by remember { mutableStateOf(false) }
                 var selectedOptionText by remember { mutableStateOf(options[0]) }
+                val ctx = LocalContext.current
+                val startForResult =
+                    rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+                        if (result.resultCode == Activity.RESULT_OK) {
+                            val intent = result.data
+                            if (result.data != null) {
+                                val task: Task<GoogleSignInAccount> =
+                                    GoogleSignIn.getSignedInAccountFromIntent(intent)
 
-                Box (
+                                /**
+                                 * handle [task] result
+                                 */
+                            } else {
+                                Toast.makeText(ctx, "Google Login Error!", Toast.LENGTH_LONG)
+                                    .show()
+                            }
+                        }
+                    }
+                Box(
 
-                ){
-                    ExposedDropdownMenuBox(expanded = isExpanded, onExpandedChange = {
-                        newValue ->
-                            isExpanded = newValue
+                ) {
+                    ExposedDropdownMenuBox(expanded = isExpanded, onExpandedChange = { newValue ->
+                        isExpanded = newValue
                     }) {
-                        TextField(value = selectedOptionText,
+                        TextField(
+                            value = selectedOptionText,
                             onValueChange = {},
                             readOnly = true,
                             label = { Text(text = "Album") },
@@ -103,9 +132,10 @@ fun MP3LinksScreen() {
                             colors = ExposedDropdownMenuDefaults.textFieldColors(),
                             modifier = Modifier.menuAnchor()
                         )
-                        ExposedDropdownMenu(expanded = isExpanded, onDismissRequest = { isExpanded = false }) {
-                            options.forEach() {
-                                    selectedOption ->
+                        ExposedDropdownMenu(
+                            expanded = isExpanded,
+                            onDismissRequest = { isExpanded = false }) {
+                            options.forEach() { selectedOption ->
                                 DropdownMenuItem(onClick = {
                                     selectedOptionText = selectedOption
                                     isExpanded = false
@@ -119,7 +149,10 @@ fun MP3LinksScreen() {
                 }
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
-                    onClick = { /* Tải MP3 từ liên kết */ },
+                    onClick = { /* Tải MP3 từ liên kết */
+
+                            startForResult.launch(Helper.getGoogleSignInClient(ctx).signInIntent)
+                              },
                     modifier = Modifier.align(Alignment.End)
                 ) {
                     Text("Load")
@@ -131,10 +164,14 @@ fun MP3LinksScreen() {
                     items(100) {
                         Row {
                             Text(text = "Bài $it")
-                            Button(onClick = {}) {
+                            Button(onClick = {}
+                            ) {
                                 Text(text = "Dowload")
                             }
-                            Button(onClick = { /*TODO*/ }) {
+                            Button(
+                                onClick = { /*TODO*/ },
+                                enabled = false,
+                            ) {
                                 Text(text = "Play")
                             }
                         }
@@ -143,6 +180,8 @@ fun MP3LinksScreen() {
             }
         }
     )
+
+
 }
 
 @Preview(showBackground = true, showSystemUi = true)
