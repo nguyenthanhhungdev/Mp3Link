@@ -8,28 +8,38 @@ import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccoun
 import com.google.api.client.json.jackson2.JacksonFactory
 import com.google.api.services.drive.Drive
 import com.google.api.services.drive.DriveScopes
+import com.google.api.services.drive.model.FileList
 
 class DriveInstance {
-    companion object {
-        fun requestInstance(context: Context) {
-            GoogleSignIn.getLastSignedInAccount(context)?.let { googleAccount ->
+    private var drive: Drive? = null
+    fun requestInstance(context: Context) {
+        GoogleSignIn.getLastSignedInAccount(context)?.let { googleAccount ->
 
-                // get credentials
-                val credential = GoogleAccountCredential.usingOAuth2(
-                    context, listOf(DriveScopes.DRIVE, DriveScopes.DRIVE_FILE)
+            // get credentials
+            val credential = GoogleAccountCredential.usingOAuth2(
+                context, listOf(DriveScopes.DRIVE, DriveScopes.DRIVE_FILE)
+            )
+            credential.selectedAccount = googleAccount.account!!
+
+            // get Drive Instance
+            drive = Drive
+                .Builder(
+                    AndroidHttp.newCompatibleTransport(),
+                    JacksonFactory.getDefaultInstance(),
+                    credential
                 )
-                credential.selectedAccount = googleAccount.account!!
-
-                // get Drive Instance
-                val drive = Drive
-                    .Builder(
-                        AndroidHttp.newCompatibleTransport(),
-                        JacksonFactory.getDefaultInstance(),
-                        credential
-                    )
-                    .setApplicationName(context.getString(R.string.app_name))
-                    .build()
-            }
+                .setApplicationName(context.getString(R.string.app_name))
+                .build()
         }
+    }
+
+    fun getAllFoldersFromDrive(drive: Drive): List<String> {
+        val folders = mutableListOf<String>()
+
+        drive?.files()?.list()?.setQ("mimeType='application/vnd.google-apps.folder'")?.execute()?.files?.forEach { file ->
+            folders.add(file.name)
+        }
+
+        return folders
     }
 }

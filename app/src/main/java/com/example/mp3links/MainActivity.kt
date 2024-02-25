@@ -148,11 +148,15 @@ fun MP3LinksScreen() {
                     }
                 }
                 Spacer(modifier = Modifier.height(16.dp))
+                val drive = DriveInstance()
+                drive.requestInstance(LocalContext.current)
                 Button(
                     onClick = { /* Tải MP3 từ liên kết */
 
-                            startForResult.launch(Helper.getGoogleSignInClient(ctx).signInIntent)
-                              },
+                        startForResult.launch(Helper.getGoogleSignInClient(ctx).signInIntent)
+                        
+                        drive.getAllFoldersFromDrive()
+                    },
                     modifier = Modifier.align(Alignment.End)
                 ) {
                     Text("Load")
