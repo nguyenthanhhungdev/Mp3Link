@@ -33,7 +33,7 @@ class DriveInstance {
         }
     }
 
-    fun getAllFoldersFromDrive(drive: Drive): List<String> {
+    fun getAllFoldersFromDrive(): List<String> {
         val folders = mutableListOf<String>()
 
         drive?.files()?.list()?.setQ("mimeType='application/vnd.google-apps.folder'")?.execute()?.files?.forEach { file ->
