@@ -41,10 +41,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.lifecycleScope
 import com.example.mp3links.ui.theme.MP3LinksTheme
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.tasks.Task
+import com.google.api.services.drive.Drive
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,6 +66,14 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+    }
+    fun getFolder() {
+        val drive = DriveInstance()
+        drive.requestInstance(this)
+        lifecycleScope.launch { drive.getAllFoldersFromDrive() }
+        Toast.makeText(this, "co", Toast.LENGTH_LONG).show(
+
+        )
     }
 }
 
@@ -148,14 +159,13 @@ fun MP3LinksScreen() {
                     }
                 }
                 Spacer(modifier = Modifier.height(16.dp))
-                val drive = DriveInstance()
-                drive.requestInstance(LocalContext.current)
+
                 Button(
                     onClick = { /* Tải MP3 từ liên kết */
 
                         startForResult.launch(Helper.getGoogleSignInClient(ctx).signInIntent)
-                        
-                        drive.getAllFoldersFromDrive()
+//                        getFol
+
                     },
                     modifier = Modifier.align(Alignment.End)
                 ) {
