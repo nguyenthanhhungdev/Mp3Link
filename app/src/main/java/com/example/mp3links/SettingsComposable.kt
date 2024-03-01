@@ -48,7 +48,7 @@ fun SettingsPage() {
             SettingsCardText(
                 icon = painterResource(id = R.drawable.source_account_password),
                 title = "Source Account Password",
-                desc = "The authorized account password of said username"
+                desc = "The account password of said username"
             ) {}
         }
     })
@@ -56,33 +56,35 @@ fun SettingsPage() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsCardText(icon: Painter, title: String, desc: String, onClick: () -> Unit) {
+fun SettingsCardText(
+    modifier: Modifier = Modifier, icon: Painter, title: String, desc: String, onClick: () -> Unit
+) {
     OutlinedCard(
         onClick = { onClick() },
-        modifier = Modifier
+        modifier = modifier
             .padding(horizontal = 10.dp, vertical = 5.dp)
             .fillMaxWidth()
     ) {
         Row(
-            modifier = Modifier
+            modifier = modifier
                 .fillMaxWidth()
-                .padding(10.dp), verticalAlignment = Alignment.CenterVertically
+                .padding(10.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
                 painter = icon,
                 contentDescription = null,
-                modifier = Modifier
-                    .padding(horizontal = 20.dp)
+                modifier = modifier.padding(horizontal = 20.dp)
             )
             Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
                 Text(
                     text = title,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
+                    modifier = modifier
                 )
                 Text(
-                    text = desc,
-                    fontSize = 14.sp,
+                    text = desc, fontSize = 14.sp, modifier = modifier
                 )
             }
         }
