@@ -1,0 +1,1479 @@
+{
+  "albums": [
+    {
+      "name": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}",
+      "songs": [
+        {
+          "name": "01. DANGANRONPA.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/01. DANGANRONPA.flac"
+        },
+        {
+          "name": "02. \u3060\u3093\u304c\u3093\u308d\u3093\u3071\uff01.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/02. \u3060\u3093\u304c\u3093\u308d\u3093\u3071\uff01.flac"
+        },
+        {
+          "name": "03. \u304a\u3057\u304a\u304d\u30ed\u30b1\u30c3\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/03. \u304a\u3057\u304a\u304d\u30ed\u30b1\u30c3\u30c8.flac"
+        },
+        {
+          "name": "04. Beautiful Days.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/04. Beautiful Days.flac"
+        },
+        {
+          "name": "05. Beautiful Dead.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/05. Beautiful Dead.flac"
+        },
+        {
+          "name": "06. \u5b66\u7d1a\u88c1\u5224\u9ece\u660e\u7de8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/06. \u5b66\u7d1a\u88c1\u5224\u9ece\u660e\u7de8.flac"
+        },
+        {
+          "name": "07. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696d.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/07. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696d.flac"
+        },
+        {
+          "name": "08. BOX 15.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/08. BOX 15.flac"
+        },
+        {
+          "name": "09. \u75be\u8d70\u3059\u308b\u9752\u6625\u306e\u30b8\u30e3\u30f3\u30af\u30d5\u30fc\u30c9.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/09. \u75be\u8d70\u3059\u308b\u9752\u6625\u306e\u30b8\u30e3\u30f3\u30af\u30d5\u30fc\u30c9.flac"
+        },
+        {
+          "name": "10. DISTRUST.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/10. DISTRUST.flac"
+        },
+        {
+          "name": "11. \u5343\u672c\u30ce\u30c3\u30af.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/11. \u5343\u672c\u30ce\u30c3\u30af.flac"
+        },
+        {
+          "name": "12. \u51e6\u5211\u306b\u9858\u3044\u3092\u2026.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/12. \u51e6\u5211\u306b\u9858\u3044\u3092\u2026.flac"
+        },
+        {
+          "name": "13. \u30a4\u30ad\u30ad\u30eb.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/13. \u30a4\u30ad\u30ad\u30eb.flac"
+        },
+        {
+          "name": "14. \u731b\u592a\u4e9c\u6700\u82e6\u5a41\u5f1f\u9162\u83ef\u6075\u6148.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/14. \u731b\u592a\u4e9c\u6700\u82e6\u5a41\u5f1f\u9162\u83ef\u6075\u6148.flac"
+        },
+        {
+          "name": "15. \u958b\u5ef7\u30a2\u30f3\u30c0\u30fc\u30b0\u30e9\u30a6\u30f3\u30c9.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/15. \u958b\u5ef7\u30a2\u30f3\u30c0\u30fc\u30b0\u30e9\u30a6\u30f3\u30c9.flac"
+        },
+        {
+          "name": "16. M.T.B..flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/16. M.T.B..flac"
+        },
+        {
+          "name": "17. \u8b70\u8ad6 -BREAK-.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/17. \u8b70\u8ad6 -BREAK-.flac"
+        },
+        {
+          "name": "18. \u7d76\u671b\u6c5a\u67d3\u30ce\u30a4\u30ba\u30df\u30e5\u30fc\u30b8\u30c3\u30af.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/18. \u7d76\u671b\u6c5a\u67d3\u30ce\u30a4\u30ba\u30df\u30e5\u30fc\u30b8\u30c3\u30af.flac"
+        },
+        {
+          "name": "19. \u7d76\u671b\u75c7\u5019\u7fa4.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/19. \u7d76\u671b\u75c7\u5019\u7fa4.flac"
+        },
+        {
+          "name": "20. \u30d9\u30eb\u30b5\u30a4\u30e6\u7523\u706b\u3042\u3076\u308a\u9b54\u5973\u72e9\u308a\u4ed5\u7acb\u3066.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/20. \u30d9\u30eb\u30b5\u30a4\u30e6\u7523\u706b\u3042\u3076\u308a\u9b54\u5973\u72e9\u308a\u4ed5\u7acb\u3066.flac"
+        },
+        {
+          "name": "21. \u9031\u520a\u5c11\u5e74\u30bc\u30c4\u30dc\u30a6\u30de\u30ac\u30b8\u30f3.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/21. \u9031\u520a\u5c11\u5e74\u30bc\u30c4\u30dc\u30a6\u30de\u30ac\u30b8\u30f3.flac"
+        },
+        {
+          "name": "22. SUPER M.T.B..flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/22. SUPER M.T.B..flac"
+        },
+        {
+          "name": "23. \u3088\u3046\u3053\u305d\u7d76\u671b\u5b66\u5712.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/23. \u3088\u3046\u3053\u305d\u7d76\u671b\u5b66\u5712.flac"
+        },
+        {
+          "name": "24. \u30b7\u30e7\u30d9\u30eb\u306e\u9054\u4eba.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/24. \u30b7\u30e7\u30d9\u30eb\u306e\u9054\u4eba.flac"
+        },
+        {
+          "name": "25. \u88dc\u7fd2 for \u4e0d\u904b.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/25. \u88dc\u7fd2 for \u4e0d\u904b.flac"
+        },
+        {
+          "name": "26. Beautiful Morning.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/26. Beautiful Morning.flac"
+        },
+        {
+          "name": "27. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u63a8\u7406.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 1/27. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u63a8\u7406.flac"
+        },
+        {
+          "name": "09. \u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/09. \u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8.flac"
+        },
+        {
+          "name": "01. DANGANRONPA(DR Version).flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/01. DANGANRONPA(DR Version).flac"
+        },
+        {
+          "name": "02. \u30e2\u30e2\u30e2\u30e2\u30ce\u30af\u30de\uff01.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/02. \u30e2\u30e2\u30e2\u30e2\u30ce\u30af\u30de\uff01.flac"
+        },
+        {
+          "name": "03. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u6388\u696d.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/03. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u6388\u696d.flac"
+        },
+        {
+          "name": "04. \u30bc\u30c4\u30dc\u30a6\u30b7\u30f3\u30c9\u30ed\u30fc\u30e0.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/04. \u30bc\u30c4\u30dc\u30a6\u30b7\u30f3\u30c9\u30ed\u30fc\u30e0.flac"
+        },
+        {
+          "name": "05. SUPER FINAL M.T.B..flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/05. SUPER FINAL M.T.B..flac"
+        },
+        {
+          "name": "06. BOX 16.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/06. BOX 16.flac"
+        },
+        {
+          "name": "07. \u8b70\u8ad6 -MIX-(EDGE Version).flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/07. \u8b70\u8ad6 -MIX-(EDGE Version).flac"
+        },
+        {
+          "name": "08. \u5b66\u7d1a\u88c1\u5224\u4e71\u4e16\u7de8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/08. \u5b66\u7d1a\u88c1\u5224\u4e71\u4e16\u7de8.flac"
+        },
+        {
+          "name": "10. \u8b70\u8ad6 -HEAT UP-.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/10. \u8b70\u8ad6 -HEAT UP-.flac"
+        },
+        {
+          "name": "11. \u9583\u304d\u30a2\u30ca\u30b0\u30e9\u30e0.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/11. \u9583\u304d\u30a2\u30ca\u30b0\u30e9\u30e0.flac"
+        },
+        {
+          "name": "12. \u8b70\u8ad6 -HOPE VS DESPAIR-.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/12. \u8b70\u8ad6 -HOPE VS DESPAIR-.flac"
+        },
+        {
+          "name": "13. \u88dc\u7fd2 for \u30df\u30b9\u30c6\u30ea\u30a2\u30b9.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/13. \u88dc\u7fd2 for \u30df\u30b9\u30c6\u30ea\u30a2\u30b9.flac"
+        },
+        {
+          "name": "14. \u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/14. \u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba.flac"
+        },
+        {
+          "name": "15. \u8d85\u9ad8\u6821\u7d1a\u306e\u7d76\u671b\u7684\u304a\u3057\u304a\u304d.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/15. \u8d85\u9ad8\u6821\u7d1a\u306e\u7d76\u671b\u7684\u304a\u3057\u304a\u304d.flac"
+        },
+        {
+          "name": "16. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u518d\u73fe.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/16. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u518d\u73fe.flac"
+        },
+        {
+          "name": "17. \u30cb\u30e5\u30fc\u30fb\u30ef\u30fc\u30eb\u30c9\u30fb\u30aa\u30fc\u30c0\u30fc.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/17. \u30cb\u30e5\u30fc\u30fb\u30ef\u30fc\u30eb\u30c9\u30fb\u30aa\u30fc\u30c0\u30fc.flac"
+        },
+        {
+          "name": "18. \u3055\u3088\u306a\u3089\u7d76\u671b\u5b66\u5712.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/18. \u3055\u3088\u306a\u3089\u7d76\u671b\u5b66\u5712.flac"
+        },
+        {
+          "name": "19. \u518d\u751f -rebuild-.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/19. \u518d\u751f -rebuild-.flac"
+        },
+        {
+          "name": "20. \u30d7\u30ed\u30ed\u30fc\u30b0\u30fb\u30af\u30ec\u30b8\u30c3\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/20. \u30d7\u30ed\u30ed\u30fc\u30b0\u30fb\u30af\u30ec\u30b8\u30c3\u30c8.flac"
+        },
+        {
+          "name": "21. \u30c1\u30e3\u30d7\u30bf\u30fc\uff11.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/21. \u30c1\u30e3\u30d7\u30bf\u30fc\uff11.flac"
+        },
+        {
+          "name": "22. \u30c1\u30e3\u30d7\u30bf\u30fc\uff12.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/22. \u30c1\u30e3\u30d7\u30bf\u30fc\uff12.flac"
+        },
+        {
+          "name": "23. \u30c1\u30e3\u30d7\u30bf\u30fc\uff13.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/23. \u30c1\u30e3\u30d7\u30bf\u30fc\uff13.flac"
+        },
+        {
+          "name": "24. \u30c1\u30e3\u30d7\u30bf\u30fc\uff14.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/24. \u30c1\u30e3\u30d7\u30bf\u30fc\uff14.flac"
+        },
+        {
+          "name": "25. \u30c1\u30e3\u30d7\u30bf\u30fc\uff15.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/25. \u30c1\u30e3\u30d7\u30bf\u30fc\uff15.flac"
+        },
+        {
+          "name": "26. \u30c1\u30e3\u30d7\u30bf\u30fc\uff16.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/26. \u30c1\u30e3\u30d7\u30bf\u30fc\uff16.flac"
+        },
+        {
+          "name": "27. \u3042\u306a\u305f\u3068\u79c1\u306e\u901a\u4fe1\u7c3f.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/27. \u3042\u306a\u305f\u3068\u79c1\u306e\u901a\u4fe1\u7c3f.flac"
+        },
+        {
+          "name": "28. \u30b3\u30c8\u30c0\u30de\u30b2\u30c3\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/28. \u30b3\u30c8\u30c0\u30de\u30b2\u30c3\u30c8.flac"
+        },
+        {
+          "name": "29. \u30d7\u30ec\u30bc\u30f3\u30c8\u30b2\u30c3\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/29. \u30d7\u30ec\u30bc\u30f3\u30c8\u30b2\u30c3\u30c8.flac"
+        },
+        {
+          "name": "30. \u30ec\u30a2\u30d7\u30ec\u30bc\u30f3\u30c8\u30b2\u30c3\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/30. \u30ec\u30a2\u30d7\u30ec\u30bc\u30f3\u30c8\u30b2\u30c3\u30c8.flac"
+        },
+        {
+          "name": "31. \u30e2\u30ce\u30e2\u30ce\u30de\u30b7\u30fc\u30f3\uff01.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/31. \u30e2\u30ce\u30e2\u30ce\u30de\u30b7\u30fc\u30f3\uff01.flac"
+        },
+        {
+          "name": "32. \u8d77\u52d5\u30fb\u96fb\u5b50\u751f\u5f92\u624b\u5e33.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/32. \u8d77\u52d5\u30fb\u96fb\u5b50\u751f\u5f92\u624b\u5e33.flac"
+        },
+        {
+          "name": "33. \u3042\u306e\u4eba\u306f\u898b\u305f\uff01.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/33. \u3042\u306e\u4eba\u306f\u898b\u305f\uff01.flac"
+        },
+        {
+          "name": "34. \u30e9\u30b8\u30aa\u4f53\u64cd\u6697\u6bba\u62f3.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/34. \u30e9\u30b8\u30aa\u4f53\u64cd\u6697\u6bba\u62f3.flac"
+        },
+        {
+          "name": "35. \u30d5\u30a7\u30a4\u30ba\u30ea\u30b6\u30eb\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/35. \u30d5\u30a7\u30a4\u30ba\u30ea\u30b6\u30eb\u30c8.flac"
+        },
+        {
+          "name": "36. \u30c1\u30e3\u30d7\u30bf\u30fc\u30ea\u30b6\u30eb\u30c8.flac",
+          "path": "2011.02.14 - DANGANRONPA Original Soundtrack {SPLR-1101~2}/Disc 2/36. \u30c1\u30e3\u30d7\u30bf\u30fc\u30ea\u30b6\u30eb\u30c8.flac"
+        }
+      ]
+    },
+    {
+      "name": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}",
+      "songs": [
+        {
+          "name": "19. Re- \u958b\u5ef7\u30a2\u30f3\u30c0\u30fc\u30b0\u30e9\u30a6\u30f3\u30c9.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/19. Re- \u958b\u5ef7\u30a2\u30f3\u30c0\u30fc\u30b0\u30e9\u30a6\u30f3\u30c9.flac"
+        },
+        {
+          "name": "01. DANGANRONPA SUPER MIX.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/01. DANGANRONPA SUPER MIX.flac"
+        },
+        {
+          "name": "02. \u3060\u3093\u3060\u3093\u3060\u3093\u304c\u3093\u308d\u3093\u3071!.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/02. \u3060\u3093\u3060\u3093\u3060\u3093\u304c\u3093\u308d\u3093\u3071!.flac"
+        },
+        {
+          "name": "03. \u30a6\u30b5\u30df\u30df\u30df\u30df!.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/03. \u30a6\u30b5\u30df\u30df\u30df\u30df!.flac"
+        },
+        {
+          "name": "04. \u5357\u56fd\u306b\u6765\u3061\u3083\u3063\u305f.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/04. \u5357\u56fd\u306b\u6765\u3061\u3083\u3063\u305f.flac"
+        },
+        {
+          "name": "05. Beautiful Ruin \u3010Summer Salt\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/05. Beautiful Ruin \u3010Summer Salt\u3011.flac"
+        },
+        {
+          "name": "06. Beautiful Days \u3010Piano Arrange\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/06. Beautiful Days \u3010Piano Arrange\u3011.flac"
+        },
+        {
+          "name": "07. Re- Beautiful Morning.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/07. Re- Beautiful Morning.flac"
+        },
+        {
+          "name": "08. \u30e2\u30ce\u30df\u5148\u751f\u306e\u6559\u80b2\u5b9f\u7fd2.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/08. \u30e2\u30ce\u30df\u5148\u751f\u306e\u6559\u80b2\u5b9f\u7fd2.flac"
+        },
+        {
+          "name": "09. \u30a4\u30b3\u30ed\u30b7\u30a2.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/09. \u30a4\u30b3\u30ed\u30b7\u30a2.flac"
+        },
+        {
+          "name": "10. Re- \u9031\u520a\u5c11\u5e74\u30bc\u30c4\u30dc\u30a6\u30de\u30ac\u30b8\u30f3.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/10. Re- \u9031\u520a\u5c11\u5e74\u30bc\u30c4\u30dc\u30a6\u30de\u30ac\u30b8\u30f3.flac"
+        },
+        {
+          "name": "11. Re- \u30bc\u30c4\u30dc\u30a6\u30b7\u30f3\u30c9\u30ed\u30fc\u30e0.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/11. Re- \u30bc\u30c4\u30dc\u30a6\u30b7\u30f3\u30c9\u30ed\u30fc\u30e0.flac"
+        },
+        {
+          "name": "12. \u304a\u3057\u304a\u304d feat.\u30d5\u30e9\u30a4\u30d8\u30ea.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/12. \u304a\u3057\u304a\u304d feat.\u30d5\u30e9\u30a4\u30d8\u30ea.flac"
+        },
+        {
+          "name": "13. \u7d76\u671b\u30c8\u30ed\u30d4\u30ab\u30eb.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/13. \u7d76\u671b\u30c8\u30ed\u30d4\u30ab\u30eb.flac"
+        },
+        {
+          "name": "14. Re- \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u6388\u696d.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/14. Re- \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u6388\u696d.flac"
+        },
+        {
+          "name": "15. Re- \u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/15. Re- \u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba.flac"
+        },
+        {
+          "name": "16. 3\u756a\u76ee\u306e\u5cf6\u30c6\u30fc\u30de.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/16. 3\u756a\u76ee\u306e\u5cf6\u30c6\u30fc\u30de.flac"
+        },
+        {
+          "name": "17. Re- \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696d.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/17. Re- \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696d.flac"
+        },
+        {
+          "name": "18. Welcome DANGAN IsLand!! \u3010OP Version\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/18. Welcome DANGAN IsLand!! \u3010OP Version\u3011.flac"
+        },
+        {
+          "name": "20. P.T.A..flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/20. P.T.A..flac"
+        },
+        {
+          "name": "21. \u8b70\u8ad6 -BREAK- \u30102nd mix\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/21. \u8b70\u8ad6 -BREAK- \u30102nd mix\u3011.flac"
+        },
+        {
+          "name": "22. Re- DISTRUST.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/22. Re- DISTRUST.flac"
+        },
+        {
+          "name": "23. \u304a\u3057\u304a\u304d feat.\u30d1\u30da\u30c3\u30c8\u30ac\u30fc\u30eb.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/23. \u304a\u3057\u304a\u304d feat.\u30d1\u30da\u30c3\u30c8\u30ac\u30fc\u30eb.flac"
+        },
+        {
+          "name": "24. \u5b66\u7d1a\u88c1\u5224\u4e71\u4e16\u7de8 \u5dfb\u306e\u4e8c.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/24. \u5b66\u7d1a\u88c1\u5224\u4e71\u4e16\u7de8 \u5dfb\u306e\u4e8c.flac"
+        },
+        {
+          "name": "25. Re- \u51e6\u5211\u306b\u9858\u3044\u3092\u2026.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/25. Re- \u51e6\u5211\u306b\u9858\u3044\u3092\u2026.flac"
+        },
+        {
+          "name": "26. \u5b66\u7d1a\u88c1\u5224\u9ece\u660e\u7de8 \u5dfb\u306e\u4e8c.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/26. \u5b66\u7d1a\u88c1\u5224\u9ece\u660e\u7de8 \u5dfb\u306e\u4e8c.flac"
+        },
+        {
+          "name": "27. Re- \u3088\u3046\u3053\u305d\u7d76\u671b\u5b66\u5712.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/27. Re- \u3088\u3046\u3053\u305d\u7d76\u671b\u5b66\u5712.flac"
+        },
+        {
+          "name": "28. Re- \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u63a8\u7406.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 1/28. Re- \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u63a8\u7406.flac"
+        },
+        {
+          "name": "19. \u304a\u3057\u304a\u304d feat.\u30e9\u30b9\u30c8\u30cf\u30a4\u30ad\u30f3\u30b0.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/19. \u304a\u3057\u304a\u304d feat.\u30e9\u30b9\u30c8\u30cf\u30a4\u30ad\u30f3\u30b0.flac"
+        },
+        {
+          "name": "01. DANGANRONPA \u30102nd GIG\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/01. DANGANRONPA \u30102nd GIG\u3011.flac"
+        },
+        {
+          "name": "02. \u30e2\u30e2\u30e2\u30e2\u30ce\u30af\u30de!.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/02. \u30e2\u30e2\u30e2\u30e2\u30ce\u30af\u30de!.flac"
+        },
+        {
+          "name": "03. Beautiful Ruin.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/03. Beautiful Ruin.flac"
+        },
+        {
+          "name": "04. \u30a6\u30b5\u30ae\u306e\u8033\u3068\u6a5f\u95a2\u9283.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/04. \u30a6\u30b5\u30ae\u306e\u8033\u3068\u6a5f\u95a2\u9283.flac"
+        },
+        {
+          "name": "05. Re- \u75be\u8d70\u3059\u308b\u9752\u6625\u306e\u30b8\u30e3\u30f3\u30af\u30d5\u30fc\u30c9.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/05. Re- \u75be\u8d70\u3059\u308b\u9752\u6625\u306e\u30b8\u30e3\u30f3\u30af\u30d5\u30fc\u30c9.flac"
+        },
+        {
+          "name": "06. \u5b66\u7d1a\u88c1\u5224\u7570\u5f62\u7de8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/06. \u5b66\u7d1a\u88c1\u5224\u7570\u5f62\u7de8.flac"
+        },
+        {
+          "name": "07. \u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8 \u5dfb\u306e\u4e8c.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/07. \u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8 \u5dfb\u306e\u4e8c.flac"
+        },
+        {
+          "name": "08. \u78ef\u306e\u9999\u308a\u306e\u30c7\u30c3\u30c9\u30a8\u30f3\u30c9.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/08. \u78ef\u306e\u9999\u308a\u306e\u30c7\u30c3\u30c9\u30a8\u30f3\u30c9.flac"
+        },
+        {
+          "name": "09. \u53cd\u8ad6 -CROSS SWORD-.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/09. \u53cd\u8ad6 -CROSS SWORD-.flac"
+        },
+        {
+          "name": "10. \u304a\u3057\u304a\u304d feat.\u30ed\u30b1\u30c3\u30c8\u30d1\u30f3\u30c4.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/10. \u304a\u3057\u304a\u304d feat.\u30ed\u30b1\u30c3\u30c8\u30d1\u30f3\u30c4.flac"
+        },
+        {
+          "name": "11. \u30b9\u30b0\u30a4\u30b3\u30ed\u30b7\u30a2.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/11. \u30b9\u30b0\u30a4\u30b3\u30ed\u30b7\u30a2.flac"
+        },
+        {
+          "name": "12. \u5b66\u7d1a\u88c1\u5224\u672a\u6765\u7de8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/12. \u5b66\u7d1a\u88c1\u5224\u672a\u6765\u7de8.flac"
+        },
+        {
+          "name": "13. \u8b70\u8ad6 -HEAT UP- \u30102nd mix\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/13. \u8b70\u8ad6 -HEAT UP- \u30102nd mix\u3011.flac"
+        },
+        {
+          "name": "14. Re- \u30a4\u30ad\u30ad\u30eb.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/14. Re- \u30a4\u30ad\u30ad\u30eb.flac"
+        },
+        {
+          "name": "15. ANAGRAM.NET.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/15. ANAGRAM.NET.flac"
+        },
+        {
+          "name": "16. HYPER P.T.A..flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/16. HYPER P.T.A..flac"
+        },
+        {
+          "name": "17. DIVE DRIVE.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/17. DIVE DRIVE.flac"
+        },
+        {
+          "name": "18. \u3069\u6b63\u7fa9\u4e00\u756a\u661f!.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/18. \u3069\u6b63\u7fa9\u4e00\u756a\u661f!.flac"
+        },
+        {
+          "name": "20. \u8b70\u8ad6 -HOPE VS DESPAIR- \u30102nd mix\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/20. \u8b70\u8ad6 -HOPE VS DESPAIR- \u30102nd mix\u3011.flac"
+        },
+        {
+          "name": "21. HYPER ULTRA P.T.A..flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/21. HYPER ULTRA P.T.A..flac"
+        },
+        {
+          "name": "22. Welcome DANGAN IsLand!!.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/22. Welcome DANGAN IsLand!!.flac"
+        },
+        {
+          "name": "23. 5\u756a\u76ee\u306e\u5cf6\u30c6\u30fc\u30de.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/23. 5\u756a\u76ee\u306e\u5cf6\u30c6\u30fc\u30de.flac"
+        },
+        {
+          "name": "24. \u30e2\u30ce\u30af\u30de\u30aa\u30fc\u30d0\u30fc\u30af\u30ed\u30c3\u30af.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/24. \u30e2\u30ce\u30af\u30de\u30aa\u30fc\u30d0\u30fc\u30af\u30ed\u30c3\u30af.flac"
+        },
+        {
+          "name": "25. \u65b0\u4e16\u754c\u306e\u30a2\u30eb\u30bf\u30fc\u30a8\u30b4.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/25. \u65b0\u4e16\u754c\u306e\u30a2\u30eb\u30bf\u30fc\u30a8\u30b4.flac"
+        },
+        {
+          "name": "26. Re- \u7d76\u671b\u75c7\u5019\u7fa4.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/26. Re- \u7d76\u671b\u75c7\u5019\u7fa4.flac"
+        },
+        {
+          "name": "27. \u304a\u3057\u304a\u304d feat.\u30a2\u30fc\u30b1\u30fc\u30c9\u30e9\u30d3\u30c3\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/27. \u304a\u3057\u304a\u304d feat.\u30a2\u30fc\u30b1\u30fc\u30c9\u30e9\u30d3\u30c3\u30c8.flac"
+        },
+        {
+          "name": "28. Re- \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u518d\u73fe.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/28. Re- \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u518d\u73fe.flac"
+        },
+        {
+          "name": "29. Re- \u30cb\u30e5\u30fc\u30fb\u30ef\u30fc\u30eb\u30c9\u30fb\u30aa\u30fc\u30c0\u30fc.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 2/29. Re- \u30cb\u30e5\u30fc\u30fb\u30ef\u30fc\u30eb\u30c9\u30fb\u30aa\u30fc\u30c0\u30fc.flac"
+        },
+        {
+          "name": "01. \u304a\u3057\u304a\u304d feat.\u3060\u3093\u304c\u3093\u30a2\u30a4\u30e9\u30f3\u30c9.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/01. \u304a\u3057\u304a\u304d feat.\u3060\u3093\u304c\u3093\u30a2\u30a4\u30e9\u30f3\u30c9.flac"
+        },
+        {
+          "name": "02. \u3089\u3076\u306f\u30b5\u30d0\u30a4\u30d0\u30eb.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/02. \u3089\u3076\u306f\u30b5\u30d0\u30a4\u30d0\u30eb.flac"
+        },
+        {
+          "name": "03. \u30e2\u30ce\u30af\u30de\u5e2b\u7236\u306e\u7279\u5225\u6388\u696d.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/03. \u30e2\u30ce\u30af\u30de\u5e2b\u7236\u306e\u7279\u5225\u6388\u696d.flac"
+        },
+        {
+          "name": "04. \u541b\u306b\u3082\u5c4a\u3051.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/04. \u541b\u306b\u3082\u5c4a\u3051.flac"
+        },
+        {
+          "name": "05. \u304a\u3044\u3067\u3084\u3059\u30e2\u30ce\u30b1\u30e2\u30ce.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/05. \u304a\u3044\u3067\u3084\u3059\u30e2\u30ce\u30b1\u30e2\u30ce.flac"
+        },
+        {
+          "name": "06. \u30a8\u30b3\u30ed\u30b7\u30a2.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/06. \u30a8\u30b3\u30ed\u30b7\u30a2.flac"
+        },
+        {
+          "name": "07. \u7d76\u671b\u7684\u5de8\u5a18.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/07. \u7d76\u671b\u7684\u5de8\u5a18.flac"
+        },
+        {
+          "name": "08. \u6b4c\u3048\u3001\u865a\u308d\u306a\u308b\u3088\u308d\u3053\u3073\u3092.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/08. \u6b4c\u3048\u3001\u865a\u308d\u306a\u308b\u3088\u308d\u3053\u3073\u3092.flac"
+        },
+        {
+          "name": "09. \u5b66\u7d1a\u88c1\u5224\u672a\u6765\u7de8 \u3010\u30a4\u30f3\u30c8\u30ed\u3042\u308a\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/09. \u5b66\u7d1a\u88c1\u5224\u672a\u6765\u7de8 \u3010\u30a4\u30f3\u30c8\u30ed\u3042\u308a\u3011.flac"
+        },
+        {
+          "name": "10. \u8b70\u8ad6 -B side-.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/10. \u8b70\u8ad6 -B side-.flac"
+        },
+        {
+          "name": "11. \u672a\u6765\u306e\u524d\u306e\u65e5.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/11. \u672a\u6765\u306e\u524d\u306e\u65e5.flac"
+        },
+        {
+          "name": "12. \u51fa\u822a -departure- (Short Version).flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/12. \u51fa\u822a -departure- (Short Version).flac"
+        },
+        {
+          "name": "13. GAME START.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/13. GAME START.flac"
+        },
+        {
+          "name": "14. \u5e0c\u671b\u65ad\u7dda\u30ce\u30a4\u30ba\u30df\u30e5\u30fc\u30b8\u30c3\u30af.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/14. \u5e0c\u671b\u65ad\u7dda\u30ce\u30a4\u30ba\u30df\u30e5\u30fc\u30b8\u30c3\u30af.flac"
+        },
+        {
+          "name": "15. \u9ec4\u660f\u306e\u63a2\u7d22.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/15. \u9ec4\u660f\u306e\u63a2\u7d22.flac"
+        },
+        {
+          "name": "16. Beautiful Ruin \u301016bit\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/16. Beautiful Ruin \u301016bit\u3011.flac"
+        },
+        {
+          "name": "17. \u30a4\u30b3\u30ed\u30b7\u30a2 \u301016bit\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/17. \u30a4\u30b3\u30ed\u30b7\u30a2 \u301016bit\u3011.flac"
+        },
+        {
+          "name": "18. \u9ec4\u660f\u306e\u771f\u76f8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/18. \u9ec4\u660f\u306e\u771f\u76f8.flac"
+        },
+        {
+          "name": "19. \u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba \u301016bit\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/19. \u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba \u301016bit\u3011.flac"
+        },
+        {
+          "name": "20. \u30a8\u30b3\u30ed\u30b7\u30a2 \u30108bitbug\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/20. \u30a8\u30b3\u30ed\u30b7\u30a2 \u30108bitbug\u3011.flac"
+        },
+        {
+          "name": "21. \u8b70\u8ad6 -HEAT UP- \u30108bit\u3011.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/21. \u8b70\u8ad6 -HEAT UP- \u30108bit\u3011.flac"
+        },
+        {
+          "name": "22. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c9Prologue.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/22. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c9Prologue.flac"
+        },
+        {
+          "name": "23. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb00.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/23. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb00.flac"
+        },
+        {
+          "name": "24. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c900.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/24. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c900.flac"
+        },
+        {
+          "name": "25. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb01 A\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/25. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb01 A\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "26. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb01 B\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/26. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb01 B\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "27. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c901.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/27. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c901.flac"
+        },
+        {
+          "name": "28. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb02 A\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/28. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb02 A\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "29. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb02 B\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/29. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb02 B\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "30. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c902.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/30. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c902.flac"
+        },
+        {
+          "name": "31. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb03 A\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/31. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb03 A\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "32. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb03 B\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/32. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb03 B\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "33. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c903.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/33. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c903.flac"
+        },
+        {
+          "name": "34. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb04 A\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/34. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb04 A\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "35. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb04 B\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/35. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb04 B\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "36. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c904.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/36. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c904.flac"
+        },
+        {
+          "name": "37. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb05 A\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/37. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb05 A\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "38. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb05 B\u30d1\u30fc\u30c8.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/38. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb05 B\u30d1\u30fc\u30c8.flac"
+        },
+        {
+          "name": "39. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c905.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/39. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c905.flac"
+        },
+        {
+          "name": "40. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb06.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/40. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb06.flac"
+        },
+        {
+          "name": "41. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c906.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/41. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c906.flac"
+        },
+        {
+          "name": "42. \u30e2\u30e9\u30c3\u30c1\u30e3\u30c3\u30bf\u30f3.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/42. \u30e2\u30e9\u30c3\u30c1\u30e3\u30c3\u30bf\u30f3.flac"
+        },
+        {
+          "name": "43. \u30e4\u30e9\u30ec\u30c1\u30e3\u30c3\u30bf\u30f3.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/43. \u30e4\u30e9\u30ec\u30c1\u30e3\u30c3\u30bf\u30f3.flac"
+        },
+        {
+          "name": "44. \u30af\u30ea\u30a2\u30b7\u30c1\u30e3\u30c3\u30bf\u30f3.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/44. \u30af\u30ea\u30a2\u30b7\u30c1\u30e3\u30c3\u30bf\u30f3.flac"
+        },
+        {
+          "name": "45. \u9ec4\u660f\u306e\u7d42\u308f\u308a.flac",
+          "path": "2012.08.31 - SUPER DANGANRONPA 2 Original Soundtrack {SPLR-1103~5}/Disc 3/45. \u9ec4\u660f\u306e\u7d42\u308f\u308a.flac"
+        }
+      ]
+    },
+    {
+      "name": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}",
+      "songs": [
+        {
+          "name": "01. bitbitbit TKD Remix.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/01. bitbitbit TKD Remix.flac"
+        },
+        {
+          "name": "02. Welcome to Danganisland(ver.Walk At the Beach).flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/02. Welcome to Danganisland(ver.Walk At the Beach).flac"
+        },
+        {
+          "name": "03. DoSeigi1stStar.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/03. DoSeigi1stStar.flac"
+        },
+        {
+          "name": "04. KAITEI underground.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/04. KAITEI underground.flac"
+        },
+        {
+          "name": "05. AlterEGO of the new world.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/05. AlterEGO of the new world.flac"
+        },
+        {
+          "name": "06. MONOKUMA\u5e2b\u7236FieldWork.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/06. MONOKUMA\u5e2b\u7236FieldWork.flac"
+        },
+        {
+          "name": "07. Beautiful Dead 2012.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/07. Beautiful Dead 2012.flac"
+        },
+        {
+          "name": "08. IGYOU.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/08. IGYOU.flac"
+        },
+        {
+          "name": "09. P.T.A.M.T.B..flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/09. P.T.A.M.T.B..flac"
+        },
+        {
+          "name": "10. LOVESABA Ocean View.flac",
+          "path": "2012.12.29 - RE-DANGANRONPA ~SUPER DANGANRONPA bitbitbit TKD Remix~ {SCSP-1001}/10. LOVESABA Ocean View.flac"
+        }
+      ]
+    },
+    {
+      "name": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}",
+      "songs": [
+        {
+          "name": "01. DSO_DANGANRONPA.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/01. DSO_DANGANRONPA.flac"
+        },
+        {
+          "name": "02. \u7d76\u5bfe\uff1f\u7d76\u671b\uff1f\u5c11\u5973.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/02. \u7d76\u5bfe\uff1f\u7d76\u671b\uff1f\u5c11\u5973.flac"
+        },
+        {
+          "name": "03. DSO_BeautifulDead.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/03. DSO_BeautifulDead.flac"
+        },
+        {
+          "name": "04. Wonderful dead001.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/04. Wonderful dead001.flac"
+        },
+        {
+          "name": "05. DSO_DISTRUST.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/05. DSO_DISTRUST.flac"
+        },
+        {
+          "name": "06. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/06. \u30c1\u30e3\u30d7\u30bf\u30fc\u30bf\u30a4\u30c8\u30eb.flac"
+        },
+        {
+          "name": "07. \u30a4\u30c3\u30c4\u30fb\u30a2\u30fb\u30e2\u30ce\u30af\u30de\u30ef\u30fc\u30eb\u30c9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/07. \u30a4\u30c3\u30c4\u30fb\u30a2\u30fb\u30e2\u30ce\u30af\u30de\u30ef\u30fc\u30eb\u30c9.flac"
+        },
+        {
+          "name": "08. \u7d76\u5bfe\u6050\u6016\u5c11\u5973.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/08. \u7d76\u5bfe\u6050\u6016\u5c11\u5973.flac"
+        },
+        {
+          "name": "09. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30d8\u30ea\u589c\u843d\u7de8\uff5e.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/09. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30d8\u30ea\u589c\u843d\u7de8\uff5e.flac"
+        },
+        {
+          "name": "10. \u308f\u305f\u3057\u9054\u306f\u4e16\u754c\u3092\u5909\u3048\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u3044.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/10. \u308f\u305f\u3057\u9054\u306f\u4e16\u754c\u3092\u5909\u3048\u308b\u3053\u3068\u304c\u3067\u304d\u306a\u3044.flac"
+        },
+        {
+          "name": "11. \u5411\u3053\u3046\u5cb8\u306e\u5e0c\u671b.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/11. \u5411\u3053\u3046\u5cb8\u306e\u5e0c\u671b.flac"
+        },
+        {
+          "name": "12. secret base\uff5e\u30aa\u30c8\u30ca\u304c\u306e\u3053\u3057\u305f\u3082\u306e\uff5e.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/12. secret base\uff5e\u30aa\u30c8\u30ca\u304c\u306e\u3053\u3057\u305f\u3082\u306e\uff5e.flac"
+        },
+        {
+          "name": "13. \u30aa\u30bd\u30ef\u30ec\u30eb\u30e2\u30ce.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/13. \u30aa\u30bd\u30ef\u30ec\u30eb\u30e2\u30ce.flac"
+        },
+        {
+          "name": "14. VERSUS.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/14. VERSUS.flac"
+        },
+        {
+          "name": "15. Wonderful dead002.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/15. Wonderful dead002.flac"
+        },
+        {
+          "name": "16. DSO_\u30a4\u30ad\u30ad\u30eb.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/16. DSO_\u30a4\u30ad\u30ad\u30eb.flac"
+        },
+        {
+          "name": "17. \u51fa\u6483\uff01\u305d\u306e\u540d\u306f\u30ed\u30dc.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/17. \u51fa\u6483\uff01\u305d\u306e\u540d\u306f\u30ed\u30dc.flac"
+        },
+        {
+          "name": "18. \u306a\u305e\u306a\u305e\u3089\u3093\u3069.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/18. \u306a\u305e\u306a\u305e\u3089\u3093\u3069.flac"
+        },
+        {
+          "name": "19. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30d1\u30e9\u30b7\u30e5\u30fc\u30c8\u843d\u4e0b\u7de8\uff5e.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/19. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30d1\u30e9\u30b7\u30e5\u30fc\u30c8\u843d\u4e0b\u7de8\uff5e.flac"
+        },
+        {
+          "name": "20. DSO_ \u75be\u8d70\u3059\u308b\u9752\u6625\u306e\u30b8\u30e3\u30f3\u30af\u30d5\u30fc\u30c9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/20. DSO_ \u75be\u8d70\u3059\u308b\u9752\u6625\u306e\u30b8\u30e3\u30f3\u30af\u30d5\u30fc\u30c9.flac"
+        },
+        {
+          "name": "21. Welcome to TOWA tower.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/21. Welcome to TOWA tower.flac"
+        },
+        {
+          "name": "22. \u5730\u7344\u306e\u4e2d\u5fc3\u3067\u611b\u3092\u53eb\u3076\u30de\u30e2\u30ce.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/22. \u5730\u7344\u306e\u4e2d\u5fc3\u3067\u611b\u3092\u53eb\u3076\u30de\u30e2\u30ce.flac"
+        },
+        {
+          "name": "23. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u6c34\u6cf3\u7206\u7834\u7de8\uff5e.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/23. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u6c34\u6cf3\u7206\u7834\u7de8\uff5e.flac"
+        },
+        {
+          "name": "24. DSO_\u51e6\u5211\u306b\u9858\u3044\u3092.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/24. DSO_\u51e6\u5211\u306b\u9858\u3044\u3092.flac"
+        },
+        {
+          "name": "25. \u3053\u308c\u304c\u3001\u308f\u305f\u3057\u9054\u306e\u751f\u304d\u308b\u9053.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 1/25. \u3053\u308c\u304c\u3001\u308f\u305f\u3057\u9054\u306e\u751f\u304d\u308b\u9053.flac"
+        },
+        {
+          "name": "18. \u6226\u58eb\u306e\u304a\u3057\u304a\u304d.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/18. \u6226\u58eb\u306e\u304a\u3057\u304a\u304d.flac"
+        },
+        {
+          "name": "01. \u30e2\u30ce\u30af\u30de\u3068\u904a\u307c\u3046.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/01. \u30e2\u30ce\u30af\u30de\u3068\u904a\u307c\u3046.flac"
+        },
+        {
+          "name": "02. \u9769\u547d\u5b66\u533a\u306e\u304a\u3068\u304e\u3070\u306a\u3057.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/02. \u9769\u547d\u5b66\u533a\u306e\u304a\u3068\u304e\u3070\u306a\u3057.flac"
+        },
+        {
+          "name": "03. \u5c11\u5973\u6226\u7dda\u7570\u72b6\u3042\u308a.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/03. \u5c11\u5973\u6226\u7dda\u7570\u72b6\u3042\u308a.flac"
+        },
+        {
+          "name": "04. \u5e0c\u671b\u306e\u6226\u58eb\u305f\u3061.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/04. \u5e0c\u671b\u306e\u6226\u58eb\u305f\u3061.flac"
+        },
+        {
+          "name": "05. DSO_\u7d76\u671b\u75c7\u5019\u7fa4.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/05. DSO_\u7d76\u671b\u75c7\u5019\u7fa4.flac"
+        },
+        {
+          "name": "06. \u52c7\u8005\u306e\u304a\u3057\u304a\u304d.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/06. \u52c7\u8005\u306e\u304a\u3057\u304a\u304d.flac"
+        },
+        {
+          "name": "07. DSO_\u78ef\u306e\u9999\u308a\u306e\u30c7\u30c3\u30c9\u30a8\u30f3\u30c9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/07. DSO_\u78ef\u306e\u9999\u308a\u306e\u30c7\u30c3\u30c9\u30a8\u30f3\u30c9.flac"
+        },
+        {
+          "name": "08. \u7d76\u5bfe\u7d76\u671b\u5c11\u5973.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/08. \u7d76\u5bfe\u7d76\u671b\u5c11\u5973.flac"
+        },
+        {
+          "name": "09. \u7d76\u5bfe\u5984\u60f3\u5c11\u5973.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/09. \u7d76\u5bfe\u5984\u60f3\u5c11\u5973.flac"
+        },
+        {
+          "name": "10. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30aa\u30c8\u30ca\u306e\u30b8\u30aa\u30e9\u30de\u7de8\uff5e.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/10. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30aa\u30c8\u30ca\u306e\u30b8\u30aa\u30e9\u30de\u7de8\uff5e.flac"
+        },
+        {
+          "name": "11. \u50e7\u4fb6\u306e\u304a\u3057\u304a\u304d.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/11. \u50e7\u4fb6\u306e\u304a\u3057\u304a\u304d.flac"
+        },
+        {
+          "name": "12. \u30a4\u30c3\u30c4\u30fb\u30a2\u30fb\u30ad\u30c3\u30ba\u30ef\u30fc\u30eb\u30c9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/12. \u30a4\u30c3\u30c4\u30fb\u30a2\u30fb\u30ad\u30c3\u30ba\u30ef\u30fc\u30eb\u30c9.flac"
+        },
+        {
+          "name": "13. Wonderful dead003.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/13. Wonderful dead003.flac"
+        },
+        {
+          "name": "14. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30e2\u30ce\u30af\u30de\u8972\u6765\u7de8\uff5e.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/14. \u304a\u3057\u304a\u304d\u51fa\u5f35\u7248\uff5e\u30e2\u30ce\u30af\u30de\u8972\u6765\u7de8\uff5e.flac"
+        },
+        {
+          "name": "15. \u30b3\u30c9\u30e2\u306e\u56fd\u306e\u30a2\u30ea\u30b9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/15. \u30b3\u30c9\u30e2\u306e\u56fd\u306e\u30a2\u30ea\u30b9.flac"
+        },
+        {
+          "name": "16. \u6697\u95c7\u306e\u30a2\u30ab\u30ea.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/16. \u6697\u95c7\u306e\u30a2\u30ab\u30ea.flac"
+        },
+        {
+          "name": "17. DSO_\u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/17. DSO_\u30aa\u30fc\u30eb\u30fb\u30aa\u30fc\u30eb\u30fb\u30a2\u30dd\u30ed\u30b8\u30fc\u30ba.flac"
+        },
+        {
+          "name": "19. DSO_\u3088\u3046\u3053\u305d\u7d76\u671b\u5b66\u5712.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/19. DSO_\u3088\u3046\u3053\u305d\u7d76\u671b\u5b66\u5712.flac"
+        },
+        {
+          "name": "20. \u6697\u95c7\u306e\u30cf\u30ab\u30a4.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/20. \u6697\u95c7\u306e\u30cf\u30ab\u30a4.flac"
+        },
+        {
+          "name": "21. \u9b54\u7269\u306b\u306a\u3093\u304b\u3001\u306a\u308b\u3082\u3093\u304b.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/21. \u9b54\u7269\u306b\u306a\u3093\u304b\u3001\u306a\u308b\u3082\u3093\u304b.flac"
+        },
+        {
+          "name": "22. \u6226\u6144\u306e\u65cb\u5f8b.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/22. \u6226\u6144\u306e\u65cb\u5f8b.flac"
+        },
+        {
+          "name": "23. DSO_\u30cb\u30e5\u30fc\u30fb\u30ef\u30fc\u30eb\u30c9\u30fb\u30aa\u30fc\u30c0\u30fc.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/23. DSO_\u30cb\u30e5\u30fc\u30fb\u30ef\u30fc\u30eb\u30c9\u30fb\u30aa\u30fc\u30c0\u30fc.flac"
+        },
+        {
+          "name": "24. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/24. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c9.flac"
+        },
+        {
+          "name": "25. \u30d3\u30c3\u30b0\u30d0\u30f3\u30e2\u30ce\u30af\u30de\u767b\u5834\uff01\uff01.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 2/25. \u30d3\u30c3\u30b0\u30d0\u30f3\u30e2\u30ce\u30af\u30de\u767b\u5834\uff01\uff01.flac"
+        },
+        {
+          "name": "16. 'progressive-\u6f38\u9032- ShortVersion'.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/16. 'progressive-\u6f38\u9032- ShortVersion'.flac"
+        },
+        {
+          "name": "01. Wonderful dead004.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/01. Wonderful dead004.flac"
+        },
+        {
+          "name": "02. \u7981\u3058\u3089\u308c\u305f\u3042\u305d\u3073\u5834.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/02. \u7981\u3058\u3089\u308c\u305f\u3042\u305d\u3073\u5834.flac"
+        },
+        {
+          "name": "03. \u30e9\u30b9\u30c8VERSUS.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/03. \u30e9\u30b9\u30c8VERSUS.flac"
+        },
+        {
+          "name": "04. Re- \u958b\u5ef7\u30a2\u30f3\u30c0\u30fc\u30b0\u30e9\u30a6\u30f3\u30c9.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/04. Re- \u958b\u5ef7\u30a2\u30f3\u30c0\u30fc\u30b0\u30e9\u30a6\u30f3\u30c9.flac"
+        },
+        {
+          "name": "05. \u7fd4\u2019s\u30d5\u30a3\u30fc\u30d0\u30fc\u30bf\u30a4\u30e0.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/05. \u7fd4\u2019s\u30d5\u30a3\u30fc\u30d0\u30fc\u30bf\u30a4\u30e0.flac"
+        },
+        {
+          "name": "06. DSO_\u9031\u520a\u5c11\u5e74\u30bc\u30c4\u30dc\u30a6\u30de\u30ac\u30b8\u30f3.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/06. DSO_\u9031\u520a\u5c11\u5e74\u30bc\u30c4\u30dc\u30a6\u30de\u30ac\u30b8\u30f3.flac"
+        },
+        {
+          "name": "07. \u8ce2\u8005\u306e\u304a\u3057\u304a\u304d\uff01\uff01.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/07. \u8ce2\u8005\u306e\u304a\u3057\u304a\u304d\uff01\uff01.flac"
+        },
+        {
+          "name": "08. DSO_\u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696d.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/08. DSO_\u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696d.flac"
+        },
+        {
+          "name": "09. DSO_\u30bc\u30c4\u30dc\u30a6\u30b7\u30f3\u30c9\u30ed\u30fc\u30e0.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/09. DSO_\u30bc\u30c4\u30dc\u30a6\u30b7\u30f3\u30c9\u30ed\u30fc\u30e0.flac"
+        },
+        {
+          "name": "10. \u5854\u548c\u767a\u5730\u7344\u884c\u304d.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/10. \u5854\u548c\u767a\u5730\u7344\u884c\u304d.flac"
+        },
+        {
+          "name": "11. Wonderful dead005.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/11. Wonderful dead005.flac"
+        },
+        {
+          "name": "12. \u9b54\u6cd5\u4f7f\u3044\u3068\u306e\u6700\u7d42\u6c7a\u6226.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/12. \u9b54\u6cd5\u4f7f\u3044\u3068\u306e\u6700\u7d42\u6c7a\u6226.flac"
+        },
+        {
+          "name": "13. \u8b70\u8ad6 -HOPE VS DESPAIR-.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/13. \u8b70\u8ad6 -HOPE VS DESPAIR-.flac"
+        },
+        {
+          "name": "14. \u9b54\u6cd5\u4f7f\u3044\u306e\u304a\u3057\u304a\u304d.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/14. \u9b54\u6cd5\u4f7f\u3044\u306e\u304a\u3057\u304a\u304d.flac"
+        },
+        {
+          "name": "15. \u672a\u6765\u306e\u524d\u306e\u65e5.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/15. \u672a\u6765\u306e\u524d\u306e\u65e5.flac"
+        },
+        {
+          "name": "17. \u30e2\u30ce\u30c3\u30af\u30de\u30f3\u8d77\u52d5.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/17. \u30e2\u30ce\u30c3\u30af\u30de\u30f3\u8d77\u52d5.flac"
+        },
+        {
+          "name": "18. \u5984\u60f3\u3057\u3061\u3083\u3046\u308f\u3088\u3093.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/18. \u5984\u60f3\u3057\u3061\u3083\u3046\u308f\u3088\u3093.flac"
+        },
+        {
+          "name": "19. \u304a\u307f\u305b\u3084\u3055\u3093.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/19. \u304a\u307f\u305b\u3084\u3055\u3093.flac"
+        },
+        {
+          "name": "20. \u30b3\u30c9\u30e2\u306e\u6311\u6226\u72b6.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/20. \u30b3\u30c9\u30e2\u306e\u6311\u6226\u72b6.flac"
+        },
+        {
+          "name": "21. \u304a\u307e\u308b\u3067\u30bb\u30fc\u30d6.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/21. \u304a\u307e\u308b\u3067\u30bb\u30fc\u30d6.flac"
+        },
+        {
+          "name": "22. \u30b3\u30c8\u30c0\u30deGET\u3060\u305c\uff01.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/22. \u30b3\u30c8\u30c0\u30deGET\u3060\u305c\uff01.flac"
+        },
+        {
+          "name": "23. \u30b9\u30ad\u30ebGET\u3060\u305c\uff01.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/23. \u30b9\u30ad\u30ebGET\u3060\u305c\uff01.flac"
+        },
+        {
+          "name": "24. \u96a0\u308c\u30ad\u30c3\u30ba\u767a\u898b\uff01.flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/24. \u96a0\u308c\u30ad\u30c3\u30ba\u767a\u898b\uff01.flac"
+        },
+        {
+          "name": "25. \u30e2\u30ce\u30af\u30de\u3068\u904a\u307c\u3046(Instruments).flac",
+          "path": "2014.12.18 - Zettai Zetsubou Shoujo Danganronpa Another Episode Original Soundtrack {SPLR-1106~8}/Disc 3/25. \u30e2\u30ce\u30af\u30de\u3068\u904a\u307c\u3046(Instruments).flac"
+        }
+      ]
+    },
+    {
+      "name": "2017.02.24 - DANGANRONPA V3 ~Happy Holidays Mix~ {EBCD-0075}",
+      "songs": [
+        {
+          "name": "01. Happy Holidays Mix.flac",
+          "path": "2017.02.24 - DANGANRONPA V3 ~Happy Holidays Mix~ {EBCD-0075}/01. Happy Holidays Mix.flac"
+        }
+      ]
+    },
+    {
+      "name": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}",
+      "songs": [
+        {
+          "name": "01. DANGANRONPA V3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/01. DANGANRONPA V3.flac"
+        },
+        {
+          "name": "02. \u3060\u3093\u304c\u3093\u308d\u3093\u3071!\u3076\u3044\u3059\u308a\u30fc!.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/02. \u3060\u3093\u304c\u3093\u308d\u3093\u3071!\u3076\u3044\u3059\u308a\u30fc!.flac"
+        },
+        {
+          "name": "03. Rise of the Ultimate.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/03. Rise of the Ultimate.flac"
+        },
+        {
+          "name": "04. EXISAL TRIBE.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/04. EXISAL TRIBE.flac"
+        },
+        {
+          "name": "05. \u30e2\u30ce\u30af\u30de\u30fc\u30ba\u767b\u5834.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/05. \u30e2\u30ce\u30af\u30de\u30fc\u30ba\u767b\u5834.flac"
+        },
+        {
+          "name": "06. 16\u4eba\u306e\u5909\u8eab.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/06. 16\u4eba\u306e\u5909\u8eab.flac"
+        },
+        {
+          "name": "07. \u304a\u306f\u3063\u304f\u307e\u30fc!.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/07. \u304a\u306f\u3063\u304f\u307e\u30fc!.flac"
+        },
+        {
+          "name": "08. \u30c1\u30e3\u30d7\u30bf\u30fc\u30af\u30ec\u30b8\u30c3\u30c8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/08. \u30c1\u30e3\u30d7\u30bf\u30fc\u30af\u30ec\u30b8\u30c3\u30c8.flac"
+        },
+        {
+          "name": "09. \u30e2\u30ce\u30af\u30de\u767b\u5834.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/09. \u30e2\u30ce\u30af\u30de\u767b\u5834.flac"
+        },
+        {
+          "name": "10. Become Friends.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/10. Become Friends.flac"
+        },
+        {
+          "name": "11. Nightmare in Locker.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/11. Nightmare in Locker.flac"
+        },
+        {
+          "name": "12. Beautiful Lie.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/12. Beautiful Lie.flac"
+        },
+        {
+          "name": "13. \u6b7b\u4f53\u767a\u898bA.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/13. \u6b7b\u4f53\u767a\u898bA.flac"
+        },
+        {
+          "name": "14. NEW T.A.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/14. NEW T.A.flac"
+        },
+        {
+          "name": "15. DX\u80b2\u6210\u8a08\u753b.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/15. DX\u80b2\u6210\u8a08\u753b.flac"
+        },
+        {
+          "name": "16. Living in Lazy Parallel World.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/16. Living in Lazy Parallel World.flac"
+        },
+        {
+          "name": "17. \u7d76\u671bSearching.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/17. \u7d76\u671bSearching.flac"
+        },
+        {
+          "name": "18. Cool Morning.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/18. Cool Morning.flac"
+        },
+        {
+          "name": "19. \u7d76\u671b\u30c7\u30b9\u30ed\u30fc\u30c9.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/19. \u7d76\u671b\u30c7\u30b9\u30ed\u30fc\u30c9.flac"
+        },
+        {
+          "name": "20. BRAIN DRIVER.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/20. BRAIN DRIVER.flac"
+        },
+        {
+          "name": "21. Darkness Time.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/21. Darkness Time.flac"
+        },
+        {
+          "name": "22. \u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/22. \u30cd\u30b3\u3075\u3093\u3058\u3083\u3063\u305f.flac"
+        },
+        {
+          "name": "23. Almost Hell Heaven.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/23. Almost Hell Heaven.flac"
+        },
+        {
+          "name": "24. Clair de Lune (from Suite bergamasque).flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/24. Clair de Lune (from Suite bergamasque).flac"
+        },
+        {
+          "name": "25. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c9\u30af\u30ec\u30b8\u30c3\u30c8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/25. \u30c1\u30e3\u30d7\u30bf\u30fc\u30a8\u30f3\u30c9\u30af\u30ec\u30b8\u30c3\u30c8.flac"
+        },
+        {
+          "name": "26. Hope of Spring.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/26. Hope of Spring.flac"
+        },
+        {
+          "name": "27. \u970a\u3068\u793c\u3068\u9e97\u3068.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/27. \u970a\u3068\u793c\u3068\u9e97\u3068.flac"
+        },
+        {
+          "name": "28. \u304b\u3054\u306e\u3053.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 1/28. \u304b\u3054\u306e\u3053.flac"
+        },
+        {
+          "name": "01. DANGANRONPA V3 Loop Version.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/01. DANGANRONPA V3 Loop Version.flac"
+        },
+        {
+          "name": "02. DANVEGAS.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/02. DANVEGAS.flac"
+        },
+        {
+          "name": "03. Finding Peace Party.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/03. Finding Peace Party.flac"
+        },
+        {
+          "name": "04. \u30e2\u30ce\u30e2\u30ce\u30b9\u30ed\u30c3\u30c8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/04. \u30e2\u30ce\u30e2\u30ce\u30b9\u30ed\u30c3\u30c8.flac"
+        },
+        {
+          "name": "05. \u767a\u6398\u30a4\u30de\u30b8\u30cd\u30fc\u30b7\u30e7\u30f3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/05. \u767a\u6398\u30a4\u30de\u30b8\u30cd\u30fc\u30b7\u30e7\u30f3.flac"
+        },
+        {
+          "name": "06. \u5e0c\u671b\u30c7\u30b9\u30ed\u30fc\u30c9.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/06. \u5e0c\u671b\u30c7\u30b9\u30ed\u30fc\u30c9.flac"
+        },
+        {
+          "name": "07. \u624d\u80fdSelect.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/07. \u624d\u80fdSelect.flac"
+        },
+        {
+          "name": "08. New Classmate of the Dead.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/08. New Classmate of the Dead.flac"
+        },
+        {
+          "name": "09. Hope of Summer.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/09. Hope of Summer.flac"
+        },
+        {
+          "name": "10. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u6388\u696dV3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/10. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u6388\u696dV3.flac"
+        },
+        {
+          "name": "11. Living in Lazy Parallel World (Short Ver.).flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/11. Living in Lazy Parallel World (Short Ver.).flac"
+        },
+        {
+          "name": "12. Moon on the Water.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/12. Moon on the Water.flac"
+        },
+        {
+          "name": "13. \u6b7b\u4f53\u767a\u898bC.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/13. \u6b7b\u4f53\u767a\u898bC.flac"
+        },
+        {
+          "name": "14. REAL\u30fbFICTION.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/14. REAL\u30fbFICTION.flac"
+        },
+        {
+          "name": "15. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696dV3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/15. \u30e2\u30ce\u30af\u30de\u5148\u751f\u306e\u8ab2\u5916\u6388\u696dV3.flac"
+        },
+        {
+          "name": "16. \u82e6\u60b6\u306e\u7cf8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/16. \u82e6\u60b6\u306e\u7cf8.flac"
+        },
+        {
+          "name": "17. Wonderful Story.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/17. Wonderful Story.flac"
+        },
+        {
+          "name": "18. Let's \u30b3\u30ed\u30b7\u30a2\u30a4.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/18. Let's \u30b3\u30ed\u30b7\u30a2\u30a4.flac"
+        },
+        {
+          "name": "19. HYPER NEW T.A.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/19. HYPER NEW T.A.flac"
+        },
+        {
+          "name": "20. \u6b7b\u4f53\u767a\u898bB.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/20. \u6b7b\u4f53\u767a\u898bB.flac"
+        },
+        {
+          "name": "21. \u4eca\u6614\u4ed5\u7f6e\u7d75\u5dfb.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/21. \u4eca\u6614\u4ed5\u7f6e\u7d75\u5dfb.flac"
+        },
+        {
+          "name": "22. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u63a8\u7406V3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/22. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u63a8\u7406V3.flac"
+        },
+        {
+          "name": "23. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u518d\u73feV3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/23. \u30af\u30e9\u30a4\u30de\u30c3\u30af\u30b9\u518d\u73feV3.flac"
+        },
+        {
+          "name": "24. \u30a2\u30d0\u30f3\u30e0\u30fc\u30d3\u30fc.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 1 {SPLR-1112~3}/Disc 2/24. \u30a2\u30d0\u30f3\u30e0\u30fc\u30d3\u30fc.flac"
+        }
+      ]
+    },
+    {
+      "name": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}",
+      "songs": [
+        {
+          "name": "17. \u30a2\u30ca\u30b0\u30e9\u30e0.NEW.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/17. \u30a2\u30ca\u30b0\u30e9\u30e0.NEW.flac"
+        },
+        {
+          "name": "01. DANGANRONPA V3 Full Version.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/01. DANGANRONPA V3 Full Version.flac"
+        },
+        {
+          "name": "02. V3Gallery Music.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/02. V3Gallery Music.flac"
+        },
+        {
+          "name": "03. \u30c1\u30e3\u30d7\u30bf\u30fc\u30d6\u30ea\u30c3\u30b8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/03. \u30c1\u30e3\u30d7\u30bf\u30fc\u30d6\u30ea\u30c3\u30b8.flac"
+        },
+        {
+          "name": "04. \u30b9\u30b0Beautiful Lie.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/04. \u30b9\u30b0Beautiful Lie.flac"
+        },
+        {
+          "name": "05. \u6b7b\u4f53\u767a\u898bD.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/05. \u6b7b\u4f53\u767a\u898bD.flac"
+        },
+        {
+          "name": "06. \u30d0\u30b0\u30ba\u30d1\u30cb\u30c3\u30af.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/06. \u30d0\u30b0\u30ba\u30d1\u30cb\u30c3\u30af.flac"
+        },
+        {
+          "name": "07. \u79c1\u3068\u50d5\u306e\u5b66\u7d1a\u88c1\u5224.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/07. \u79c1\u3068\u50d5\u306e\u5b66\u7d1a\u88c1\u5224.flac"
+        },
+        {
+          "name": "08. \u5b66\u7d1a\u88c1\u5224\u9ece\u660e\u7de8\u3000\u5dfb\u306e\u4e09.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/08. \u5b66\u7d1a\u88c1\u5224\u9ece\u660e\u7de8\u3000\u5dfb\u306e\u4e09.flac"
+        },
+        {
+          "name": "09. \u5b66\u7d1a\u88c1\u5224\u5b87\u5b99\u7de8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/09. \u5b66\u7d1a\u88c1\u5224\u5b87\u5b99\u7de8.flac"
+        },
+        {
+          "name": "10. \u5b66\u7d1a\u88c1\u5224\u5fa9\u6d3b\u7de8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/10. \u5b66\u7d1a\u88c1\u5224\u5fa9\u6d3b\u7de8.flac"
+        },
+        {
+          "name": "11. V3\u8b70\u8ad6 -BREAK-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/11. V3\u8b70\u8ad6 -BREAK-.flac"
+        },
+        {
+          "name": "12. V3\u8b70\u8ad6 -SCRUM-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/12. V3\u8b70\u8ad6 -SCRUM-.flac"
+        },
+        {
+          "name": "13. \u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8V3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/13. \u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8V3.flac"
+        },
+        {
+          "name": "14. V3\u8b70\u8ad6 -HEAT UP-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/14. V3\u8b70\u8ad6 -HEAT UP-.flac"
+        },
+        {
+          "name": "15. V3\u8b70\u8ad6 -PANIC-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/15. V3\u8b70\u8ad6 -PANIC-.flac"
+        },
+        {
+          "name": "16. V3\u8b70\u8ad6 -HOPE VS DESPAIR-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/16. V3\u8b70\u8ad6 -HOPE VS DESPAIR-.flac"
+        },
+        {
+          "name": "18. V3\u53cd\u8ad6 -CROSS SWORD-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/18. V3\u53cd\u8ad6 -CROSS SWORD-.flac"
+        },
+        {
+          "name": "19. \u30b9\u30b0\u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8V3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/19. \u30b9\u30b0\u5b66\u7d1a\u88c1\u5224\u592a\u967d\u7de8V3.flac"
+        },
+        {
+          "name": "20. V3\u8b70\u8ad6 -PERJURY-.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/20. V3\u8b70\u8ad6 -PERJURY-.flac"
+        },
+        {
+          "name": "21. FINAL T.A.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/21. FINAL T.A.flac"
+        },
+        {
+          "name": "22. \u30cb\u30e5\u30fc\u30ef\u30fc\u30eb\u30c9\u30aa\u30fc\u30c0\u30fcV3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 1/22. \u30cb\u30e5\u30fc\u30ef\u30fc\u30eb\u30c9\u30aa\u30fc\u30c0\u30fcV3.flac"
+        },
+        {
+          "name": "01. DANGANRONPA FUTURE MIX V3.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/01. DANGANRONPA FUTURE MIX V3.flac"
+        },
+        {
+          "name": "02. SAKE NO TUKAMIDORI.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/02. SAKE NO TUKAMIDORI.flac"
+        },
+        {
+          "name": "03. OUTLAW RUNNER.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/03. OUTLAW RUNNER.flac"
+        },
+        {
+          "name": "04. Hope of Autumn.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/04. Hope of Autumn.flac"
+        },
+        {
+          "name": "05. Hope of Winter.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/05. Hope of Winter.flac"
+        },
+        {
+          "name": "06. \u3060\u3093\u304c\u3093\u80b2\u6210\u8a08\u753b.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/06. \u3060\u3093\u304c\u3093\u80b2\u6210\u8a08\u753b.flac"
+        },
+        {
+          "name": "07. \u6b7b\u4f53\u767a\u898bE.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/07. \u6b7b\u4f53\u767a\u898bE.flac"
+        },
+        {
+          "name": "08. \u5e0c\u671bSearching.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/08. \u5e0c\u671bSearching.flac"
+        },
+        {
+          "name": "09. \u5b66\u7d1a\u88c1\u5224\u5fa9\u6d3b\u7de8 (\u30a4\u30f3\u30c8\u30ed\u306a\u3057).flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/09. \u5b66\u7d1a\u88c1\u5224\u5fa9\u6d3b\u7de8 (\u30a4\u30f3\u30c8\u30ed\u306a\u3057).flac"
+        },
+        {
+          "name": "10. HYPER FINAL T.A.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/10. HYPER FINAL T.A.flac"
+        },
+        {
+          "name": "11. Season of Despair.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/11. Season of Despair.flac"
+        },
+        {
+          "name": "12. \u30cb\u30e5\u30fc\u5b87\u5b99\u65c5\u884c.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/12. \u30cb\u30e5\u30fc\u5b87\u5b99\u65c5\u884c.flac"
+        },
+        {
+          "name": "13. Heartless Journey.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/13. Heartless Journey.flac"
+        },
+        {
+          "name": "14. HYPER ULTRA NEW T.A.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/14. HYPER ULTRA NEW T.A.flac"
+        },
+        {
+          "name": "15. \u6b4c\u3048\u3001\u865a\u308d\u306a\u308b\u771f\u5b9f\u3092.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/15. \u6b4c\u3048\u3001\u865a\u308d\u306a\u308b\u771f\u5b9f\u3092.flac"
+        },
+        {
+          "name": "16. DANGANRONPA reissue.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/16. DANGANRONPA reissue.flac"
+        },
+        {
+          "name": "17. HYPER ULTRA FINAL T.A.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/17. HYPER ULTRA FINAL T.A.flac"
+        },
+        {
+          "name": "18. \u624d\u56da\u5b66\u5712\u306e\u7834\u58ca.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/18. \u624d\u56da\u5b66\u5712\u306e\u7834\u58ca.flac"
+        },
+        {
+          "name": "19. \u307f\u3093\u306a\u306e\u30b3\u30ed\u30b7\u30a2\u30a4\u4fee\u4e86\u5f0f.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 2/19. \u307f\u3093\u306a\u306e\u30b3\u30ed\u30b7\u30a2\u30a4\u4fee\u4e86\u5f0f.flac"
+        },
+        {
+          "name": "09. Cave Ordeal.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/09. Cave Ordeal.flac"
+        },
+        {
+          "name": "01. \u30a2\u30d0\u30f3\u30e0\u30fc\u30d3\u30fc\u6539.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/01. \u30a2\u30d0\u30f3\u30e0\u30fc\u30d3\u30fc\u6539.flac"
+        },
+        {
+          "name": "02. \u601d\u3044\u51fa\u3057\u30e9\u30a4\u30c8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/02. \u601d\u3044\u51fa\u3057\u30e9\u30a4\u30c8.flac"
+        },
+        {
+          "name": "03. \u6295\u7968\u30b9\u30ed\u30c3\u30c8.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/03. \u6295\u7968\u30b9\u30ed\u30c3\u30c8.flac"
+        },
+        {
+          "name": "04. \u8a66\u7df4Prepare.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/04. \u8a66\u7df4Prepare.flac"
+        },
+        {
+          "name": "05. Beautiful Lie in ProgramWorld.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/05. Beautiful Lie in ProgramWorld.flac"
+        },
+        {
+          "name": "06. \u7d76\u671bSearching in ProgramWorld.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/06. \u7d76\u671bSearching in ProgramWorld.flac"
+        },
+        {
+          "name": "07. \u7d76\u671b\u3068\u306e\u6226\u3044.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/07. \u7d76\u671b\u3068\u306e\u6226\u3044.flac"
+        },
+        {
+          "name": "08. Island Ordeal.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/08. Island Ordeal.flac"
+        },
+        {
+          "name": "10. School Ordeal.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/10. School Ordeal.flac"
+        },
+        {
+          "name": "11. \u771f\u306e\u7d76\u671b\u3068\u306e\u6226\u3044.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/11. \u771f\u306e\u7d76\u671b\u3068\u306e\u6226\u3044.flac"
+        },
+        {
+          "name": "12. \u30e2\u30ce\u30af\u30de\u306e\u8a66\u7df4.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/12. \u30e2\u30ce\u30af\u30de\u306e\u8a66\u7df4.flac"
+        },
+        {
+          "name": "13. \u3053\u3053\u6398\u308b!\u30e2\u30ce\u30ea\u30b9.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/13. \u3053\u3053\u6398\u308b!\u30e2\u30ce\u30ea\u30b9.flac"
+        },
+        {
+          "name": "14. \u6700\u5f8c\u306e\u7d76\u671b\u3068\u306e\u6226\u3044.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/14. \u6700\u5f8c\u306e\u7d76\u671b\u3068\u306e\u6226\u3044.flac"
+        },
+        {
+          "name": "15. Let's \u30b3\u30ed\u30b7\u30a2\u30a4\u653e\u9001.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/15. Let's \u30b3\u30ed\u30b7\u30a2\u30a4\u653e\u9001.flac"
+        },
+        {
+          "name": "16. \u8a66\u7df4END.flac",
+          "path": "2017.02.24 - NEW DANGANRONPA V3 O.S.T. 2 {SPLR-1114~6}/Disc 3/16. \u8a66\u7df4END.flac"
+        }
+      ]
+    }
+  ]
+}

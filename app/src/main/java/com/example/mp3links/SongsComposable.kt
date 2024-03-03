@@ -1,15 +1,19 @@
 package com.example.mp3links
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -20,8 +24,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.DialogProperties
+import com.example.mp3link.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
@@ -39,6 +48,12 @@ fun AlbumDropDownPreview() {
     AlbumList(albums = listOf(
         Album("Nhac dam cuoi", emptyList()), Album("Nhac dam ma", emptyList())
     ), selectedAlbumState = MutableStateFlow<Album?>(null), onAlbumChange = {})
+}
+
+@Composable
+@Preview
+fun DownloadingDialogPreview() {
+    DownloadingDialog(modifier = Modifier, state = DownloadingInformation())
 }
 
 @Composable
@@ -96,12 +111,14 @@ fun AlbumList(
         var menuExpanded by remember {
             mutableStateOf(false)
         }
-        val selectedAlbum by selectedAlbumState.collectAsState(null)
-        val selectedText = selectedAlbum?.name ?: "No album"
         ExposedDropdownMenuBox(
             expanded = menuExpanded, onExpandedChange = { menuExpanded = it }, modifier = modifier
         ) {
-            TextField(value = selectedText,
+
+            TextField(value = run {
+                val selectedAlbum by selectedAlbumState.collectAsState(null)
+                selectedAlbum?.name ?: "No album"
+            },
                 onValueChange = {},
                 readOnly = true,
                 trailingIcon = {
@@ -112,8 +129,7 @@ fun AlbumList(
                 colors = ExposedDropdownMenuDefaults.textFieldColors(),
                 modifier = modifier.menuAnchor()
             )
-            ExposedDropdownMenu(
-                expanded = menuExpanded,
+            ExposedDropdownMenu(expanded = menuExpanded,
                 onDismissRequest = { menuExpanded = false }) {
                 albums.forEach { album ->
                     DropdownMenuItem(text = { Text(text = album.name) }, onClick = {
@@ -124,4 +140,51 @@ fun AlbumList(
             }
         }
     }
+}
+
+@Composable
+fun DownloadingDialog(
+    modifier: Modifier = Modifier, state: DownloadingInformation,
+) {
+    val dialogProperties =
+        DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false)
+    val downloadingType by state.downloadingState.collectAsState()
+    AlertDialog(onDismissRequest = { },
+        confirmButton = {},
+        dismissButton = {},
+        properties = dialogProperties,
+        icon = {
+            Icon(
+                painter = painterResource(id = R.drawable.downloading),
+                contentDescription = "Downloading",
+                modifier = modifier
+            )
+        },
+        title = {
+            Text(
+                text = "Downloading " + when (downloadingType) {
+                    DownloadingState.DOWNLOADING_NOT_DOWNLOADING -> "[Nothing]"
+                    DownloadingState.DOWNLOADING_DATABASE -> "Database"
+                    DownloadingState.DOWNLOADING_SONG -> "Song"
+                }, modifier = modifier
+            )
+        },
+        text = {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+                modifier = modifier
+            ) {
+                val bytesSoFar by state.bytesSoFar.collectAsState()
+                if (state.text.isNotBlank()) Text(text = state.text, modifier = modifier)
+                Text(
+                    text = "$bytesSoFar/${state.totalBytes}",
+                    fontSize = 12.sp, color = Color.Gray,
+                    modifier = modifier.align(Alignment.End),
+                )
+                if (state.progressIsIndeterminate) LinearProgressIndicator(modifier = modifier) else LinearProgressIndicator(
+                    progress = bytesSoFar.toFloat().div(state.totalBytes) * 100, modifier = modifier
+                )
+            }
+        })
 }

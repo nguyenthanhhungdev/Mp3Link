@@ -16,14 +16,13 @@ class FileCommander(
     private val password: String
 ) {
     private val databaseFile = "database.json"
-    private val appDataDirectory = Environment.getExternalStorageDirectory().toString()
+    val appDataDirectory = Environment.getExternalStorageDirectory().toString()
     private var dataSource: FTPDataSource? = null
-    var database: Database? = null
-        private set
+    private var albumListSerialize: AlbumListSerialize? = null
     var albumList: List<Album>? = null
         private set
     private val fileAccessLock = ReentrantReadWriteLock()
-    suspend fun retrieveDatabase() {
+    suspend fun retrieveDatabase(): AlbumListSerialize? {
         if (dataSource === null) {
             dataSource = FTPDataSource(sourceIP, sourcePort, username, password)
         }
@@ -33,14 +32,16 @@ class FileCommander(
                 databaseFile, localDatabaseFile
             ) { _, _ -> }
         }
-        database = Json.decodeFromString<Database>(Path(localDatabaseFile).readText())
-        albumList = database!!.albums.map { album ->
+        albumListSerialize =
+            Json.decodeFromString<AlbumListSerialize>(Path(localDatabaseFile).readText())
+        albumList = albumListSerialize!!.albums.map { album ->
             Album(album.name, album.songs.map { song ->
                 Song(
                     song.name, song.path, isSongDownloaded(song.path)
                 )
             })
         }
+        return albumListSerialize
     }
 
     suspend fun retrieveFile(
@@ -49,7 +50,7 @@ class FileCommander(
         retrieveFile(song.path, progressListener)
     }
 
-    suspend fun retrieveFile(path: String, progressListener: (Long, Long) -> Unit) {
+    private suspend fun retrieveFile(path: String, progressListener: (Long, Long) -> Unit) {
         fileAccessLock.write {
             dataSource!!.retrieveFileAsync(
                 path, Path(appDataDirectory, path).toString(), progressListener
@@ -61,13 +62,13 @@ class FileCommander(
         return isSongDownloaded(song.path)
     }
 
-    fun isSongDownloaded(path: String): Boolean {
+    private fun isSongDownloaded(path: String): Boolean {
         return Path(appDataDirectory, path).exists()
     }
 }
 
 @Serializable
-data class Database(val albums: List<AlbumSerialize>)
+data class AlbumListSerialize(val albums: List<AlbumSerialize>)
 
 @Serializable
 data class AlbumSerialize(val name: String, val songs: List<SongSerialize>)
