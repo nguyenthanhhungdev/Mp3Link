@@ -53,7 +53,7 @@ fun AlbumDropDownPreview() {
 @Composable
 @Preview
 fun DownloadingDialogPreview() {
-    DownloadingDialog(modifier = Modifier, state = DownloadingInformation())
+    DownloadingDialog(modifier = Modifier, information = DownloadingInformation())
 }
 
 @Composable
@@ -129,7 +129,8 @@ fun AlbumList(
                 colors = ExposedDropdownMenuDefaults.textFieldColors(),
                 modifier = modifier.menuAnchor()
             )
-            ExposedDropdownMenu(expanded = menuExpanded,
+            ExposedDropdownMenu(
+                expanded = menuExpanded,
                 onDismissRequest = { menuExpanded = false }) {
                 albums.forEach { album ->
                     DropdownMenuItem(text = { Text(text = album.name) }, onClick = {
@@ -144,11 +145,11 @@ fun AlbumList(
 
 @Composable
 fun DownloadingDialog(
-    modifier: Modifier = Modifier, state: DownloadingInformation,
+    modifier: Modifier = Modifier, information: DownloadingInformation,
 ) {
     val dialogProperties =
         DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false)
-    val downloadingType by state.downloadingState.collectAsState()
+    val downloadingType by information.state
     AlertDialog(onDismissRequest = { },
         confirmButton = {},
         dismissButton = {},
@@ -175,15 +176,18 @@ fun DownloadingDialog(
                 verticalArrangement = Arrangement.spacedBy(10.dp),
                 modifier = modifier
             ) {
-                val bytesSoFar by state.bytesSoFar.collectAsState()
-                if (state.text.isNotBlank()) Text(text = state.text, modifier = modifier)
+                val bytesSoFar by information.bytesSoFar
+                val totalBytes by information.totalBytes
+                if (information.text.isNotBlank()) Text(
+                    text = information.text, modifier = modifier
+                )
                 Text(
-                    text = "$bytesSoFar/${state.totalBytes}",
+                    text = "$bytesSoFar/${information.totalBytes}",
                     fontSize = 12.sp, color = Color.Gray,
                     modifier = modifier.align(Alignment.End),
                 )
-                if (state.progressIsIndeterminate) LinearProgressIndicator(modifier = modifier) else LinearProgressIndicator(
-                    progress = bytesSoFar.toFloat().div(state.totalBytes) * 100, modifier = modifier
+                if (information.progressIsIndeterminate) LinearProgressIndicator(modifier = modifier) else LinearProgressIndicator(
+                    progress = bytesSoFar.toFloat().div(totalBytes) * 100, modifier = modifier
                 )
             }
         })

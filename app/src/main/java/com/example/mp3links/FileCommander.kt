@@ -22,7 +22,7 @@ class FileCommander(
     var albumList: List<Album>? = null
         private set
     private val fileAccessLock = ReentrantReadWriteLock()
-    suspend fun retrieveDatabase(): AlbumListSerialize? {
+    suspend fun retrieveDatabase(): AlbumListSerialize {
         if (dataSource === null) {
             dataSource = FTPDataSource(sourceIP, sourcePort, username, password)
         }
@@ -32,9 +32,10 @@ class FileCommander(
                 databaseFile, localDatabaseFile
             ) { _, _ -> }
         }
-        albumListSerialize =
+        val albumListSerialize =
             Json.decodeFromString<AlbumListSerialize>(Path(localDatabaseFile).readText())
-        albumList = albumListSerialize!!.albums.map { album ->
+        this.albumListSerialize = albumListSerialize
+        albumList = albumListSerialize.albums.map { album ->
             Album(album.name, album.songs.map { song ->
                 Song(
                     song.name, song.path, isSongDownloaded(song.path)
@@ -42,6 +43,18 @@ class FileCommander(
             })
         }
         return albumListSerialize
+    }
+
+    fun retrieveDatabaseTest(string: String) {
+        val albumListSerialize = Json.decodeFromString<AlbumListSerialize>(string)
+        this.albumListSerialize = albumListSerialize
+        albumList = albumListSerialize.albums.map { album ->
+            Album(album.name, album.songs.map { song ->
+                Song(
+                    song.name, song.path, isSongDownloaded(song.path)
+                )
+            })
+        }
     }
 
     suspend fun retrieveFile(

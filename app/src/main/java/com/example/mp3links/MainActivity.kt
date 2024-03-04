@@ -8,7 +8,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -33,17 +32,21 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mp3links.ui.theme.MP3LinksTheme
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import java.io.File
 import java.net.URLConnection
 
 class MainActivity : ComponentActivity() {
+    private lateinit var viewModel: SongsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val viewModel: SongsViewModel by viewModels()
+        this.viewModel = viewModel
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.openGenericFileActivityLiveEvent.collect { path ->
+                viewModel.openGenericFileActivityLiveEvent.onEach { path ->
                     startActivity(Intent(Intent.ACTION_VIEW).apply {
                         val file = File(path)
                         FileProvider.getUriForFile(
@@ -60,7 +63,8 @@ class MainActivity : ComponentActivity() {
                                 Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION
                         }
                     })
-                }
+                }.launchIn(lifecycleScope)
+                viewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
             }
         }
         setContent {
@@ -73,7 +77,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
     }
 }
 
@@ -96,22 +99,25 @@ fun MP3LinksScreen(viewModel: SongsViewModel) {
                 .padding(padding),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Row {
-                AlbumList(albums = viewModel.albums, selectedAlbumState = viewModel.selectedAlbum) {
-                    viewModel.setSelectedAlbum(it)
-                }
-                Button(onClick = { coroutineScope.launch { viewModel.reloadAlbumList() } }) {
-                    Text("Reload")
-                }
+            AlbumList(albums = viewModel.albums, selectedAlbumState = viewModel.selectedAlbum) {
+                viewModel.setSelectedAlbum(it)
             }
-            Text(text = "Song list for Album ${viewModel.selectedAlbum}")
-            SongItemPreview()
+            Button(onClick = { coroutineScope.launch { viewModel.reloadAlbumList() } }) {
+                Text("Reload")
+            }
+            val selectedAlbum by viewModel.selectedAlbum.collectAsState()
+            Text(text = "Song list for Album ${selectedAlbum?.name}")
+            SongItemList(itemList = selectedAlbum?.songs ?: emptyList(),
+                onSongDownload = { song -> coroutineScope.launch { viewModel.downloadSong(song) } }) {
+
+            }
         }
     })
-    val downloadingState by viewModel.downloadingInformation.downloadingState.collectAsState()
+    val downloadingInformation by viewModel.downloadingInformation.collectAsState()
+    val downloadingState by downloadingInformation.state
     when (downloadingState) {
         DownloadingState.DOWNLOADING_NOT_DOWNLOADING -> {}
-        else -> DownloadingDialog(state = viewModel.downloadingInformation)
+        else -> DownloadingDialog(information = downloadingInformation)
     }
 }
 
