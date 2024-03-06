@@ -24,7 +24,8 @@ class FileCommander(
         private set
     private val fileAccessLock = ReentrantReadWriteLock()
     suspend fun retrieveDatabase(): AlbumListSerialize {
-        delay(10000)
+        // fake delay to test UI
+        delay(2000)
         val localDatabaseFile = Path(appDataDirectory, databaseFile).toString()
         fileAccessLock.write {
             dataSource.retrieveFileAsync(

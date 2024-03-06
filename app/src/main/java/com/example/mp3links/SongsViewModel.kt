@@ -68,16 +68,26 @@ class SongsViewModel : ViewModel() {
         fileCommander.retrieveDatabaseTest(string)
         _albums.clear()
         fileCommander.albumList?.let { _albums.addAll(it) }
+        if (_albums.size > 0) setSelectedAlbum(_albums.first())
     }
 
     fun downloadSong(song: Song) = viewModelScope.launch {
         _downloadingInformation.value = DownloadingInformation("Song", false)
         _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_SONG
-        fileCommander.retrieveFile(song) { bytesSoFar, totalBytes ->
-            _downloadingInformation.value.bytesSoFar.value = bytesSoFar
-            _downloadingInformation.value.totalBytes.value = totalBytes
+        try {
+            fileCommander.retrieveFile(song) { bytesSoFar, totalBytes ->
+                _downloadingInformation.value.bytesSoFar.value = bytesSoFar
+                _downloadingInformation.value.totalBytes.value = totalBytes
+            }
+        } catch (e: IOException) {
+            _showNotifyToastLiveEvent.send(
+                e.message ?: "Unknown Error connecting to database server"
+            )
+            Log.e("Network", "Connect to database error", e)
+            return@launch
+        } finally {
+            _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
         }
-        _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
     }
 
     fun playSong(song: Song) = viewModelScope.launch {

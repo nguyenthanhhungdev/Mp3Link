@@ -8,12 +8,16 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -27,11 +31,15 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.mp3link.R
 import com.example.mp3links.ui.theme.MP3LinksTheme
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -40,14 +48,17 @@ import java.io.File
 import java.net.URLConnection
 
 class MainActivity : ComponentActivity() {
-    private lateinit var viewModel: SongsViewModel
+    private lateinit var songsViewModel: SongsViewModel
+    private lateinit var ftpSettingsViewModel: FtpSettingsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val viewModel: SongsViewModel by viewModels()
-        this.viewModel = viewModel
+        val songsViewModel: SongsViewModel by viewModels()
+        this.songsViewModel = songsViewModel
+        val ftpSettingsViewModel: FtpSettingsViewModel by viewModels { FtpSettingsViewModel.factory }
+        this.ftpSettingsViewModel = ftpSettingsViewModel
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.openGenericFileActivityLiveEvent.onEach { path ->
+                songsViewModel.openGenericFileActivityLiveEvent.onEach { path ->
                     startActivity(Intent(Intent.ACTION_VIEW).apply {
                         val file = File(path)
                         FileProvider.getUriForFile(
@@ -65,11 +76,11 @@ class MainActivity : ComponentActivity() {
                         }
                     })
                 }.launchIn(lifecycleScope)
-                viewModel.showNotifyToastLiveEvent.onEach { text ->
+                songsViewModel.showNotifyToastLiveEvent.onEach { text ->
                     Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
                 }.launchIn(lifecycleScope)
-                viewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
-                viewModel.reloadAlbumList()
+                songsViewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
+                songsViewModel.reloadAlbumList()
             }
         }
         setContent {
@@ -78,7 +89,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    MP3LinksScreen(viewModel)
+                    MP3LinksScreen(songsViewModel)
                 }
             }
         }
@@ -90,12 +101,23 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MP3LinksScreen(viewModel: SongsViewModel) {
     val coroutineScope = rememberCoroutineScope()
+    val context = LocalContext.current
     Scaffold(topBar = {
-        TopAppBar(
-            colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                titleContentColor = MaterialTheme.colorScheme.primary
-            ), title = { Text("MP3 Drive") }, modifier = Modifier.fillMaxWidth()
+        TopAppBar(colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            titleContentColor = MaterialTheme.colorScheme.primary
+        ), title = { Text("MP3 Drive") }, actions = {
+            IconButton(onClick = {
+                context.startActivity(
+                    Intent(context, FtpSettingsActivity::class.java)
+                )
+            }) {
+                Icon(
+                    painter = painterResource(id = R.drawable.settings),
+                    contentDescription = "Settings"
+                )
+            }
+        }, modifier = Modifier.fillMaxWidth()
         )
     }, content = { padding ->
         Column(
@@ -103,11 +125,13 @@ fun MP3LinksScreen(viewModel: SongsViewModel) {
                 .fillMaxSize()
                 .padding(padding),
             horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             AlbumList(albums = viewModel.albums,
                 selectedAlbumState = viewModel.selectedAlbum,
                 onAlbumChange = { viewModel.setSelectedAlbum(it) },
                 onAlbumReload = { coroutineScope.launch { viewModel.reloadAlbumList() } })
+            HorizontalDivider(thickness = 3.dp)
             val selectedAlbum by viewModel.selectedAlbum.collectAsState()
             SongItemList(itemList = selectedAlbum?.songs ?: emptyList(),
                 onSongDownload = { song -> coroutineScope.launch { viewModel.downloadSong(song) } },

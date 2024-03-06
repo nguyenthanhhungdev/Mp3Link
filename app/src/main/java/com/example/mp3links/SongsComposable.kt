@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -33,7 +32,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -130,7 +130,7 @@ fun SongItem(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun AlbumList(
     modifier: Modifier = Modifier,
@@ -151,11 +151,8 @@ fun AlbumList(
                 onExpandedChange = { menuExpanded = it },
                 modifier = modifier
             ) {
-
-                TextField(value = run {
-                    val selectedAlbum by selectedAlbumState.collectAsState(null)
-                    selectedAlbum?.name ?: "No album"
-                },
+                val selectedAlbum by selectedAlbumState.collectAsState(null)
+                TextField(value = selectedAlbum?.name ?: "No album",
                     onValueChange = {},
                     readOnly = true,
                     trailingIcon = {
@@ -164,8 +161,14 @@ fun AlbumList(
                         )
                     },
                     colors = ExposedDropdownMenuDefaults.textFieldColors(),
-                    // workaround for showing soft keyboard when click on textfield
-                    keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.None),
+                    label = {
+                        Text(
+                            text = "Album select", fontWeight = FontWeight.Bold, fontSize = 16.sp
+                        )
+                    },
+                    textStyle = TextStyle.Default.copy(fontSize = 12.sp, color = Color.Gray),
+                    singleLine = true,
+                    isError = selectedAlbum === null,
                     modifier = modifier
                         .menuAnchor()
                         .fillMaxWidth()

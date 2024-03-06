@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mp3Link</string>
+    <string name="title_activity_ftp_settings">FtpSettingsActivity</string>
 </resources>
