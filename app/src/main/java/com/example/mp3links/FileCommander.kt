@@ -1,6 +1,7 @@
 package com.example.mp3links
 
 import android.os.Environment
+import kotlinx.coroutines.delay
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.util.concurrent.locks.ReentrantReadWriteLock
@@ -17,18 +18,16 @@ class FileCommander(
 ) {
     private val databaseFile = "database.json"
     val appDataDirectory = Environment.getExternalStorageDirectory().toString()
-    private var dataSource: FTPDataSource? = null
+    private val dataSource by lazy { FTPDataSource(sourceIP, sourcePort, username, password) }
     private var albumListSerialize: AlbumListSerialize? = null
     var albumList: List<Album>? = null
         private set
     private val fileAccessLock = ReentrantReadWriteLock()
     suspend fun retrieveDatabase(): AlbumListSerialize {
-        if (dataSource === null) {
-            dataSource = FTPDataSource(sourceIP, sourcePort, username, password)
-        }
+        delay(10000)
         val localDatabaseFile = Path(appDataDirectory, databaseFile).toString()
         fileAccessLock.write {
-            dataSource!!.retrieveFileAsync(
+            dataSource.retrieveFileAsync(
                 databaseFile, localDatabaseFile
             ) { _, _ -> }
         }
@@ -65,7 +64,7 @@ class FileCommander(
 
     private suspend fun retrieveFile(path: String, progressListener: (Long, Long) -> Unit) {
         fileAccessLock.write {
-            dataSource!!.retrieveFileAsync(
+            dataSource.retrieveFileAsync(
                 path, Path(appDataDirectory, path).toString(), progressListener
             )
         }

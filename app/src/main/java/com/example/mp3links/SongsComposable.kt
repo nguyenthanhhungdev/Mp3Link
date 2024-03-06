@@ -1,19 +1,26 @@
 package com.example.mp3links
 
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -26,6 +33,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,7 +55,10 @@ fun SongItemPreview() {
 fun AlbumDropDownPreview() {
     AlbumList(albums = listOf(
         Album("Nhac dam cuoi", emptyList()), Album("Nhac dam ma", emptyList())
-    ), selectedAlbumState = MutableStateFlow<Album?>(null), onAlbumChange = {})
+    ),
+        selectedAlbumState = MutableStateFlow<Album?>(null),
+        onAlbumChange = {},
+        onAlbumReload = {})
 }
 
 @Composable
@@ -70,6 +81,7 @@ fun SongItemList(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SongItem(
     modifier: Modifier = Modifier,
@@ -77,22 +89,43 @@ fun SongItem(
     onDownload: (songViewItem: Song) -> Unit,
     onPlay: (songViewItem: Song) -> Unit
 ) {
-    Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(
-            5.dp
-        )
-    ) {
-        val downloaded = item.downloaded
-        Text(text = item.name, modifier = modifier)
-        Button(onClick = { onDownload(item) }, enabled = !downloaded, modifier = modifier) {
-            Text(text = "Download")
-        }
-        Button(
-            onClick = { onPlay(item) }, enabled = downloaded, modifier = modifier
+    OutlinedCard(modifier = modifier.padding(horizontal = 5.dp, vertical = 3.dp)) {
+        Row(
+            modifier = modifier.padding(start = 10.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text(text = "Play")
+            val downloaded = item.downloaded
+            Text(
+                text = item.name, maxLines = 1, modifier = modifier
+                    .weight(1f)
+                    .basicMarquee()
+            )
+            IconButton(
+                onClick = { onDownload(item) },
+                enabled = !downloaded,
+                modifier = modifier
+                    .fillMaxHeight()
+                    .padding(0.dp)
+            ) {
+                Icon(
+                    painter = painterResource(id = if (downloaded) R.drawable.downloaded else R.drawable.download),
+                    contentDescription = if (downloaded) "Already downloaded" else "Download",
+                    modifier = modifier
+                )
+            }
+            IconButton(
+                onClick = { onPlay(item) },
+                enabled = downloaded,
+                modifier = modifier
+                    .fillMaxHeight()
+                    .padding(0.dp)
+            ) {
+                Icon(
+                    painter = painterResource(id = if (downloaded) R.drawable.play else R.drawable.not_playable),
+                    contentDescription = if (downloaded) "Play" else "Not playable",
+                    modifier = modifier
+                )
+            }
         }
     }
 }
@@ -103,42 +136,56 @@ fun AlbumList(
     modifier: Modifier = Modifier,
     albums: List<Album>,
     selectedAlbumState: StateFlow<Album?>,
-    onAlbumChange: (Album) -> Unit
+    onAlbumChange: (Album) -> Unit,
+    onAlbumReload: () -> Unit
 ) {
-    Row(
-        modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
-    ) {
-        var menuExpanded by remember {
-            mutableStateOf(false)
-        }
-        ExposedDropdownMenuBox(
-            expanded = menuExpanded, onExpandedChange = { menuExpanded = it }, modifier = modifier
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        Box(
+            modifier = modifier.weight(1f)
         ) {
-
-            TextField(value = run {
-                val selectedAlbum by selectedAlbumState.collectAsState(null)
-                selectedAlbum?.name ?: "No album"
-            },
-                onValueChange = {},
-                readOnly = true,
-                trailingIcon = {
-                    ExposedDropdownMenuDefaults.TrailingIcon(
-                        expanded = menuExpanded
-                    )
-                },
-                colors = ExposedDropdownMenuDefaults.textFieldColors(),
-                modifier = modifier.menuAnchor()
-            )
-            ExposedDropdownMenu(
+            var menuExpanded by remember {
+                mutableStateOf(false)
+            }
+            ExposedDropdownMenuBox(
                 expanded = menuExpanded,
-                onDismissRequest = { menuExpanded = false }) {
-                albums.forEach { album ->
-                    DropdownMenuItem(text = { Text(text = album.name) }, onClick = {
-                        menuExpanded = false
-                        onAlbumChange(album)
-                    })
+                onExpandedChange = { menuExpanded = it },
+                modifier = modifier
+            ) {
+
+                TextField(value = run {
+                    val selectedAlbum by selectedAlbumState.collectAsState(null)
+                    selectedAlbum?.name ?: "No album"
+                },
+                    onValueChange = {},
+                    readOnly = true,
+                    trailingIcon = {
+                        ExposedDropdownMenuDefaults.TrailingIcon(
+                            expanded = menuExpanded
+                        )
+                    },
+                    colors = ExposedDropdownMenuDefaults.textFieldColors(),
+                    // workaround for showing soft keyboard when click on textfield
+                    keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.None),
+                    modifier = modifier
+                        .menuAnchor()
+                        .fillMaxWidth()
+                )
+                ExposedDropdownMenu(expanded = menuExpanded,
+                    onDismissRequest = { menuExpanded = false }) {
+                    albums.forEach { album ->
+                        DropdownMenuItem(text = { Text(text = album.name) }, onClick = {
+                            menuExpanded = false
+                            onAlbumChange(album)
+                        })
+                    }
                 }
             }
+        }
+        IconButton(onClick = onAlbumReload) {
+            Icon(
+                painter = painterResource(id = R.drawable.refresh),
+                contentDescription = "Refresh Album List"
+            )
         }
     }
 }
@@ -181,11 +228,13 @@ fun DownloadingDialog(
                 if (information.text.isNotBlank()) Text(
                     text = information.text, modifier = modifier
                 )
-                Text(
-                    text = "$bytesSoFar/${information.totalBytes}",
-                    fontSize = 12.sp, color = Color.Gray,
-                    modifier = modifier.align(Alignment.End),
-                )
+                if (totalBytes != 0L) {
+                    Text(
+                        text = "$bytesSoFar/${totalBytes}",
+                        fontSize = 12.sp, color = Color.Gray,
+                        modifier = modifier.align(Alignment.End),
+                    )
+                }
                 if (information.progressIsIndeterminate) LinearProgressIndicator(modifier = modifier) else LinearProgressIndicator(
                     progress = bytesSoFar.toFloat().div(totalBytes) * 100, modifier = modifier
                 )

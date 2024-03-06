@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.webkit.MimeTypeMap
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -64,7 +65,11 @@ class MainActivity : ComponentActivity() {
                         }
                     })
                 }.launchIn(lifecycleScope)
+                viewModel.showNotifyToastLiveEvent.onEach { text ->
+                    Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
+                }.launchIn(lifecycleScope)
                 viewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
+                viewModel.reloadAlbumList()
             }
         }
         setContent {
@@ -99,18 +104,14 @@ fun MP3LinksScreen(viewModel: SongsViewModel) {
                 .padding(padding),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            AlbumList(albums = viewModel.albums, selectedAlbumState = viewModel.selectedAlbum) {
-                viewModel.setSelectedAlbum(it)
-            }
-            Button(onClick = { coroutineScope.launch { viewModel.reloadAlbumList() } }) {
-                Text("Reload")
-            }
+            AlbumList(albums = viewModel.albums,
+                selectedAlbumState = viewModel.selectedAlbum,
+                onAlbumChange = { viewModel.setSelectedAlbum(it) },
+                onAlbumReload = { coroutineScope.launch { viewModel.reloadAlbumList() } })
             val selectedAlbum by viewModel.selectedAlbum.collectAsState()
-            Text(text = "Song list for Album ${selectedAlbum?.name}")
             SongItemList(itemList = selectedAlbum?.songs ?: emptyList(),
-                onSongDownload = { song -> coroutineScope.launch { viewModel.downloadSong(song) } }) {
-
-            }
+                onSongDownload = { song -> coroutineScope.launch { viewModel.downloadSong(song) } },
+                onSongPlay = { song -> viewModel.playSong(song) })
         }
     })
     val downloadingInformation by viewModel.downloadingInformation.collectAsState()

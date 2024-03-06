@@ -12,12 +12,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import java.io.IOException
 import kotlin.io.path.Path
 
 class SongsViewModel : ViewModel() {
     private val _openGenericFileActivityLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
     val openGenericFileActivityLiveEvent = _openGenericFileActivityLiveEvent.receiveAsFlow()
-
+    private val _showNotifyToastLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
+    val showNotifyToastLiveEvent = _showNotifyToastLiveEvent.receiveAsFlow()
 
     private val _albums = listOf<Album>().toMutableStateList()
     val albums: List<Album>
@@ -28,11 +30,7 @@ class SongsViewModel : ViewModel() {
     private val _downloadingInformation = MutableStateFlow(DownloadingInformation())
     val downloadingInformation = _downloadingInformation.asStateFlow()
 
-    private val fileCommander = FileCommander("", 0, "", "")
-
-    init {
-//        viewModelScope.launch { fileCommander.retrieveDatabase() }
-    }
+    private val fileCommander by lazy { FileCommander("", 0, "", "") }
 
     fun setSelectedAlbum(album: Album) {
         if (_albums.contains(album)) {
@@ -42,12 +40,28 @@ class SongsViewModel : ViewModel() {
     }
 
     suspend fun reloadAlbumList() {
-        _downloadingInformation.value = DownloadingInformation("Database")
+        _downloadingInformation.value = DownloadingInformation(
+            """Connection Settings:
+            |Host:
+            |Port: 0
+            |Username:
+            |Password:
+        """.trimMargin()
+        )
         _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_DATABASE
-        fileCommander.retrieveDatabase()
+        try {
+            fileCommander.retrieveDatabase()
+        } catch (e: IOException) {
+            _showNotifyToastLiveEvent.send(
+                e.message ?: "Unknown Error connecting to database server"
+            )
+            Log.e("Network", "Connect to database error", e)
+            return
+        } finally {
+            _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
+        }
         _albums.clear()
         fileCommander.albumList?.let { _albums.addAll(it) }
-        _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
     }
 
     fun reloadAlbumListTest(string: String) {
