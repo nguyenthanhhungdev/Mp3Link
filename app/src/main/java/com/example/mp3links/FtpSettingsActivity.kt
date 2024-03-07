@@ -9,10 +9,11 @@ import androidx.annotation.RequiresApi
 
 class FtpSettingsActivity : ComponentActivity() {
     private lateinit var ftpSettingsViewModel: FtpSettingsViewModel
+
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val ftpSettingsViewModel: FtpSettingsViewModel by viewModels()
+        val ftpSettingsViewModel: FtpSettingsViewModel by viewModels { FtpSettingsViewModel.Factory }
         this.ftpSettingsViewModel = ftpSettingsViewModel
         setContent {
             SettingsPage(viewModel = ftpSettingsViewModel)

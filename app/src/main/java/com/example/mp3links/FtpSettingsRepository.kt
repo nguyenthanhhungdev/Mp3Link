@@ -54,34 +54,6 @@ class FtpSettingsRepository(private val dataStore: DataStore<FtpSettings>) {
         })
     }
 
-    sealed class SettingType {
-        abstract val validator: (String) -> Boolean
-
-        data object SourceHost : SettingType() {
-            @RequiresApi(Build.VERSION_CODES.Q)
-            override val validator: (String) -> Boolean = { text ->
-                InetAddresses.isNumericAddress(text) or Patterns.WEB_URL.matcher(text)
-                    .matches() or Patterns.IP_ADDRESS.matcher(text).matches()
-            }
-        }
-
-        data object SourcePort : SettingType() {
-            override val validator: (String) -> Boolean = { text ->
-                (text.toUIntOrNull() ?: 0) in 1..65535
-            }
-        }
-
-        data object SourceUsername : SettingType() {
-            override val validator: (String) -> Boolean =
-                { text -> text.all { char -> char.isLetterOrDigit() } }
-        }
-
-        data object SourcePassword : SettingType() {
-            override val validator: (String) -> Boolean =
-                { text -> text.all { char -> char.code in 32..127 } } // printable ascii
-        }
-    }
-
 }
 
 @Serializable
@@ -108,5 +80,34 @@ object FtpSettingsSerializer : Serializer<FtpSettings> {
         withContext(Dispatchers.IO) {
             output.write(Json.encodeToString(FtpSettings.serializer(), t).encodeToByteArray())
         }
+    }
+}
+
+sealed class SettingType {
+
+    abstract val validator: (String) -> Boolean
+
+    data object SourceHost : SettingType() {
+        @RequiresApi(Build.VERSION_CODES.Q)
+        override val validator: (String) -> Boolean = { text ->
+            InetAddresses.isNumericAddress(text) || Patterns.WEB_URL.matcher(text)
+                .matches() || Patterns.IP_ADDRESS.matcher(text).matches()
+        }
+    }
+
+    data object SourcePort : SettingType() {
+        override val validator: (String) -> Boolean = { text ->
+            (text.toUIntOrNull() ?: 0u) in 1u..65535u
+        }
+    }
+
+    data object SourceUsername : SettingType() {
+        override val validator: (String) -> Boolean =
+            { text -> text.isNotEmpty() && text.all { char -> char.isLetterOrDigit() } }
+    }
+
+    data object SourcePassword : SettingType() {
+        override val validator: (String) -> Boolean =
+            { text -> text.all { char -> char.code in 32..127 } } // printable ascii
     }
 }

@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         val songsViewModel: SongsViewModel by viewModels()
         this.songsViewModel = songsViewModel
-        val ftpSettingsViewModel: FtpSettingsViewModel by viewModels { FtpSettingsViewModel.factory }
+        val ftpSettingsViewModel: FtpSettingsViewModel by viewModels { FtpSettingsViewModel.Factory }
         this.ftpSettingsViewModel = ftpSettingsViewModel
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {

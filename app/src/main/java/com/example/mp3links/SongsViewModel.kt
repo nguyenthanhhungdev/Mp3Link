@@ -55,7 +55,7 @@ class SongsViewModel : ViewModel() {
             _showNotifyToastLiveEvent.send(
                 e.message ?: "Unknown Error connecting to database server"
             )
-            Log.e("Network", "Connect to database error", e)
+            Log.w("Network", "Connect to database error", e)
             return
         } finally {
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
@@ -83,7 +83,7 @@ class SongsViewModel : ViewModel() {
             _showNotifyToastLiveEvent.send(
                 e.message ?: "Unknown Error connecting to database server"
             )
-            Log.e("Network", "Connect to database error", e)
+            Log.w("Network", "Connect to database error", e)
             return@launch
         } finally {
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
