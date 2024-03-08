@@ -3,6 +3,7 @@ package com.example.mp3links
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -41,44 +42,30 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mp3link.R
 import com.example.mp3links.ui.theme.MP3LinksTheme
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import java.io.File
 import java.net.URLConnection
 
+private const val TAG = "MainActivity"
+
 class MainActivity : ComponentActivity() {
     private lateinit var songsViewModel: SongsViewModel
     private lateinit var ftpSettingsViewModel: FtpSettingsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val songsViewModel: SongsViewModel by viewModels()
+        val songsViewModel: SongsViewModel by viewModels { SongsViewModel.Factory }
         this.songsViewModel = songsViewModel
         val ftpSettingsViewModel: FtpSettingsViewModel by viewModels { FtpSettingsViewModel.Factory }
         this.ftpSettingsViewModel = ftpSettingsViewModel
         lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                songsViewModel.openGenericFileActivityLiveEvent.onEach { path ->
-                    startActivity(Intent(Intent.ACTION_VIEW).apply {
-                        val file = File(path)
-                        FileProvider.getUriForFile(
-                            this@MainActivity,
-                            "${applicationContext.packageName}.fileprovider",
-                            file
-                        ).let {
-                            setDataAndType(
-                                Uri.fromFile(file),
-                                MimeTypeMap.getSingleton().getMimeTypeFromExtension(file.extension)
-                                    ?: URLConnection.guessContentTypeFromName(file.name)
-                            )
-                            flags =
-                                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION
-                        }
-                    })
-                }.launchIn(lifecycleScope)
-                songsViewModel.showNotifyToastLiveEvent.onEach { text ->
-                    Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
-                }.launchIn(lifecycleScope)
+            repeatOnLifecycle(Lifecycle.State.CREATED) {
+                Log.d(TAG, "onCreate: repeatOnLifecycle CREATED")
+                openGenericFileActivity(songsViewModel)
+                showNotifyToast(songsViewModel)
+                Log.d(TAG, "onCreate: reload album list on activity start")
                 songsViewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
                 songsViewModel.reloadAlbumList()
             }
@@ -93,6 +80,32 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    private fun CoroutineScope.showNotifyToast(songsViewModel: SongsViewModel) {
+        songsViewModel.showNotifyToastLiveEvent.onEach { text ->
+            Log.d(TAG, "showNotifyToast: received event")
+            Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
+        }.launchIn(this)
+    }
+
+    private fun CoroutineScope.openGenericFileActivity(songsViewModel: SongsViewModel) {
+        songsViewModel.openGenericFileActivityLiveEvent.onEach { path ->
+            Log.d(TAG, "openGenericFileActivity: received event")
+            startActivity(Intent(Intent.ACTION_VIEW).apply {
+                val file = File(path)
+                FileProvider.getUriForFile(
+                    this@MainActivity, "${applicationContext.packageName}.fileprovider", file
+                ).let {
+                    setDataAndType(
+                        Uri.fromFile(file),
+                        MimeTypeMap.getSingleton().getMimeTypeFromExtension(file.extension)
+                            ?: URLConnection.guessContentTypeFromName(file.name)
+                    )
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION
+                }
+            })
+        }.launchIn(this)
     }
 }
 
@@ -149,8 +162,8 @@ fun MP3LinksScreen(viewModel: SongsViewModel) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun TestMutableStateList() {
-    val _songList = listOf(Song("Nhac dam cuoi", "", false), Song("Nhac dam ma", "", true))
-    val songList = _songList.toMutableStateList()
+    val songList =
+        listOf(Song("Nhac dam cuoi", "", false), Song("Nhac dam ma", "", true)).toMutableStateList()
     Column {
         Button(onClick = { songList.replaceAll { song -> song.copy(downloaded = !song.downloaded) } }) {
             Text("Change state")

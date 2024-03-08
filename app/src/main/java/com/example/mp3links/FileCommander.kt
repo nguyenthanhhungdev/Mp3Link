@@ -1,7 +1,10 @@
 package com.example.mp3links
 
 import android.os.Environment
+import android.util.Log
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.util.concurrent.locks.ReentrantReadWriteLock
@@ -10,12 +13,21 @@ import kotlin.io.path.Path
 import kotlin.io.path.exists
 import kotlin.io.path.readText
 
+private const val TAG = "FileCommander"
+
 class FileCommander(
     private val sourceIP: String,
     private val sourcePort: Int,
     private val username: String,
     private val password: String
 ) {
+    constructor(ftpSettings: FtpSettings) : this(
+        ftpSettings.sourceHost,
+        ftpSettings.sourcePort,
+        ftpSettings.sourceUsername,
+        ftpSettings.sourcePassword
+    )
+
     private val databaseFile = "database.json"
     val appDataDirectory = Environment.getExternalStorageDirectory().toString()
     private val dataSource by lazy { FTPDataSource(sourceIP, sourcePort, username, password) }
@@ -24,6 +36,7 @@ class FileCommander(
         private set
     private val fileAccessLock = ReentrantReadWriteLock()
     suspend fun retrieveDatabase(): AlbumListSerialize {
+        Log.d(TAG, "retrieveDatabase: download database soon")
         // fake delay to test UI
         delay(2000)
         val localDatabaseFile = Path(appDataDirectory, databaseFile).toString()
@@ -45,7 +58,7 @@ class FileCommander(
         return albumListSerialize
     }
 
-    fun retrieveDatabaseTest(string: String) {
+    suspend fun retrieveDatabaseTest(string: String) {
         val albumListSerialize = Json.decodeFromString<AlbumListSerialize>(string)
         this.albumListSerialize = albumListSerialize
         albumList = albumListSerialize.albums.map { album ->
@@ -71,12 +84,8 @@ class FileCommander(
         }
     }
 
-    fun isSongDownloaded(song: Song): Boolean {
-        return isSongDownloaded(song.path)
-    }
-
-    private fun isSongDownloaded(path: String): Boolean {
-        return Path(appDataDirectory, path).exists()
+    private suspend fun isSongDownloaded(path: String): Boolean = withContext(Dispatchers.IO) {
+        Path(appDataDirectory, path).exists()
     }
 }
 

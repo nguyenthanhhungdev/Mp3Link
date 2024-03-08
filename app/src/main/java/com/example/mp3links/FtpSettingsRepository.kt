@@ -17,10 +17,14 @@ import kotlinx.serialization.json.Json
 import java.io.InputStream
 import java.io.OutputStream
 
+private const val TAG = "FtpSettingsRepository"
+
 class FtpSettingsRepository(private val dataStore: DataStore<FtpSettings>) {
+    val flow = dataStore.data
     suspend fun getFtpSettings(): FtpSettings = dataStore.data.first()
 
     private suspend fun saveFtpSettings(ftpSettings: FtpSettings) {
+        Log.d(TAG, "saveFtpSettings: saving with DataStore, value $ftpSettings")
         dataStore.updateData { ftpSettings }
     }
 
@@ -31,8 +35,8 @@ class FtpSettingsRepository(private val dataStore: DataStore<FtpSettings>) {
                 SettingType.SourceUsername -> it.copy(sourceUsername = value)
                 SettingType.SourcePassword -> it.copy(sourcePassword = value)
                 else -> {
-                    Log.e(
-                        "FtpSettings", "Updating wrong setting value type (type=$type value=$value)"
+                    Log.wtf(
+                        TAG, "Updating wrong setting value type (type=$type value=$value)"
                     )
                     return
                 }
@@ -45,15 +49,14 @@ class FtpSettingsRepository(private val dataStore: DataStore<FtpSettings>) {
             when (type) {
                 SettingType.SourcePort -> it.copy(sourcePort = value)
                 else -> {
-                    Log.e(
-                        "FtpSettings", "Updating wrong setting value type (type=$type value=$value)"
+                    Log.wtf(
+                        TAG, "Updating wrong setting value type (type=$type value=$value)"
                     )
                     return
                 }
             }
         })
     }
-
 }
 
 @Serializable
