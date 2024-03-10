@@ -5,6 +5,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.toMutableStateList
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -25,8 +26,9 @@ import kotlin.io.path.Path
 
 private const val TAG = "SongsViewModel"
 
-class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) : ViewModel() {
-    private var fileCommander = FileCommander(FtpSettingsSerializer.defaultValue)
+class SongsViewModel(private val settingsRepository: SettingsRepository) : ViewModel(),
+    DefaultLifecycleObserver {
+    private var fileCommander = FileCommander(FtpSettings.defaultValue, settingsRepository)
     private val _openGenericFileActivityLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
     val openGenericFileActivityLiveEvent = _openGenericFileActivityLiveEvent.receiveAsFlow()
     private val _showNotifyToastLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
@@ -36,8 +38,8 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
         get() = _albums
     private val _downloadingInformation = MutableStateFlow(DownloadingInformation())
     val downloadingInformation = _downloadingInformation.asStateFlow()
-    private val ftpSettings: StateFlow<FtpSettings> = ftpSettingsRepository.flow.stateIn(
-        viewModelScope, SharingStarted.Eagerly, FtpSettingsSerializer.defaultValue
+    private val ftpSettings: StateFlow<FtpSettings> = settingsRepository.ftpSettingsFlow.stateIn(
+        viewModelScope, SharingStarted.Lazily, FtpSettings.defaultValue
     )
     private val _selectedAlbum = MutableStateFlow<Album?>(null)
     val selectedAlbum = _selectedAlbum.asStateFlow()
@@ -46,7 +48,7 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
         if (_albums.contains(album)) {
             _selectedAlbum.value = album
             // fetch songs here
-        } else Log.e("UI", "Selecting non-exist album")
+        } else Log.wtf(TAG, "Selecting non-exist album")
     }
 
     init {
@@ -59,16 +61,18 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
     private fun ftpSettingsUpdated() = viewModelScope.launch {
         Log.d(
             TAG,
-            "ftpSettingsUpdated: reloading with new ftp settings ${ftpSettingsRepository.getFtpSettings()}"
+            "ftpSettingsUpdated: reloading with new ftp settings ${settingsRepository.getFtpSettings()}"
         )
-        ftpSettingsRepository.getFtpSettings().run {
-            fileCommander = FileCommander(sourceHost, sourcePort, sourceUsername, sourcePassword)
+        settingsRepository.getFtpSettings().run {
+            fileCommander = FileCommander(
+                sourceHost, sourcePort, sourceUsername, sourcePassword, settingsRepository
+            )
         }
         reloadAlbumList()
     }
 
     suspend fun reloadAlbumList() {
-        ftpSettingsRepository.getFtpSettings().run {
+        settingsRepository.getFtpSettings().run {
             _downloadingInformation.value = DownloadingInformation(
                 """Connection Settings:
             |Host: $sourceHost
@@ -86,12 +90,12 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
             _showNotifyToastLiveEvent.send(
                 e.message ?: "Unknown Error connecting to database server"
             )
-            Log.w("Network", "Connect to database error", e)
+            Log.w(TAG, "Connect to database error", e)
             return
         } finally {
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
         }
-        Log.v(TAG, "reloadAlbumList: adding albums")
+        Log.v(TAG, "reloadAlbumList: adding ${fileCommander.albumList?.size} albums")
         _albums.clear()
         fileCommander.albumList?.let { _albums.addAll(it) }
     }
@@ -116,7 +120,7 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
             _showNotifyToastLiveEvent.send(
                 e.message ?: "Unknown Error connecting to database server"
             )
-            Log.w("Network", "Connect to database error", e)
+            Log.w(TAG, "Connect to database error", e)
             return@launch
         } finally {
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
@@ -127,7 +131,7 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
         Log.d(TAG, "playSong: $song")
         _openGenericFileActivityLiveEvent.send(
             Path(
-                fileCommander.appDataDirectory, song.path
+                settingsRepository.getStorageSettings().appDataUri, song.path
             ).toString()
         )
     }
@@ -137,7 +141,7 @@ class SongsViewModel(private val ftpSettingsRepository: FtpSettingsRepository) :
             initializer {
                 val application =
                     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as FtpComposeApplication)
-                SongsViewModel(application.ftpSettingsRepository)
+                SongsViewModel(application.settingsRepository)
             }
         }
     }

@@ -239,7 +239,7 @@ fun DownloadingDialog(
                     )
                 }
                 if (information.progressIsIndeterminate) LinearProgressIndicator(modifier = modifier) else LinearProgressIndicator(
-                    progress = bytesSoFar.toFloat().div(totalBytes) * 100, modifier = modifier
+                    progress = { bytesSoFar.toFloat().div(totalBytes) * 100 }, modifier = modifier
                 )
             }
         })

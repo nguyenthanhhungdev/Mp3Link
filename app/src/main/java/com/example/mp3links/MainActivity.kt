@@ -53,23 +53,29 @@ private const val TAG = "MainActivity"
 
 class MainActivity : ComponentActivity() {
     private lateinit var songsViewModel: SongsViewModel
-    private lateinit var ftpSettingsViewModel: FtpSettingsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val songsViewModel: SongsViewModel by viewModels { SongsViewModel.Factory }
         this.songsViewModel = songsViewModel
-        val ftpSettingsViewModel: FtpSettingsViewModel by viewModels { FtpSettingsViewModel.Factory }
-        this.ftpSettingsViewModel = ftpSettingsViewModel
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.CREATED) {
                 Log.d(TAG, "onCreate: repeatOnLifecycle CREATED")
                 openGenericFileActivity(songsViewModel)
                 showNotifyToast(songsViewModel)
-                Log.d(TAG, "onCreate: reload album list on activity start")
-                songsViewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
-                songsViewModel.reloadAlbumList()
             }
         }
+//        var isFirstCreated = false
+//        lifecycleScope.launch {
+//            repeatOnLifecycle(Lifecycle.State.STARTED) {
+//                Log.d(TAG, "onCreate: repeatOnLifecycle STARTED")
+//                if (!isFirstCreated) {
+//                    Log.d(TAG, "onCreate: reload album list on activity start")
+//                    songsViewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
+//                    songsViewModel.reloadAlbumList()
+//                    isFirstCreated = true
+//                }
+//            }
+//        }
         setContent {
             MP3LinksTheme {
                 // A surface container using the 'background' color from the theme
@@ -122,7 +128,7 @@ fun MP3LinksScreen(viewModel: SongsViewModel) {
         ), title = { Text("MP3 Drive") }, actions = {
             IconButton(onClick = {
                 context.startActivity(
-                    Intent(context, FtpSettingsActivity::class.java)
+                    Intent(context, SettingsActivity::class.java)
                 )
             }) {
                 Icon(

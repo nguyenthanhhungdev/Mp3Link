@@ -4,6 +4,7 @@ import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.apache.commons.net.ftp.FTP
+import org.apache.commons.net.ftp.FTPClient
 import org.apache.commons.net.ftp.FTPReply
 import org.apache.commons.net.ftp.FTPSClient
 import org.apache.commons.net.io.CopyStreamEvent
@@ -11,18 +12,21 @@ import org.apache.commons.net.io.CopyStreamListener
 import org.apache.commons.net.util.TrustManagerUtils
 import java.io.FileOutputStream
 
-private const val TAG = "FTPDataSource"
+private const val TAG = "FtpDataSource"
 
-class FTPDataSource(
+class FtpDataSource(
     private val sourceIP: String,
     private val sourcePort: Int,
     private val username: String,
-    private val password: String
+    private val password: String,
+    secureFtp: Boolean = false
 ) {
-    private val client: FTPSClient = FTPSClient("TLS", true)
+    private val client: FTPClient = if (secureFtp) FTPSClient("TLS", true) else FTPClient()
 
     init {
-        client.trustManager = TrustManagerUtils.getAcceptAllTrustManager()
+        Log.d(TAG, "init: is secure ftp $secureFtp")
+        if (secureFtp) (client as FTPSClient).trustManager =
+            TrustManagerUtils.getAcceptAllTrustManager()
     }
 
     private var currentFileTotalSize: Long = -1

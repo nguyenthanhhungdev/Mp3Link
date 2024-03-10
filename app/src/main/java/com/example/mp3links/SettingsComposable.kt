@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextRange
@@ -47,81 +48,94 @@ import kotlinx.coroutines.delay
 @RequiresApi(Build.VERSION_CODES.Q)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsPage(viewModel: FtpSettingsViewModel) {
+fun SettingsPage(viewModel: SettingsViewModel) {
     var settingType by rememberSaveable {
-        mutableStateOf(FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN)
+        mutableStateOf(SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN)
     }
+    val ftpSettings by viewModel.ftpSettingsFlow.collectAsState()
+    val storageSettings by viewModel.storageSettingsFlow.collectAsState()
     Scaffold(topBar = {
         TopAppBar(title = { Text(text = "Settings") }, modifier = Modifier.fillMaxWidth())
     }, content = { padding ->
         Column(modifier = Modifier.padding(padding)) {
+            SettingsSectionText(text = "FTP")
             SettingsCardText(
                 icon = painterResource(id = R.drawable.source_host),
                 title = "Source Host",
-                desc = "The internet address of the FTP server"
-            ) { settingType = FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_HOST }
+                desc = "The internet address of the FTP server",
+                value = ftpSettings.sourceHost
+            ) { settingType = SettingsViewModel.DialogEnum.DIALOG_SOURCE_HOST }
             SettingsCardText(
                 icon = painterResource(id = R.drawable.source_port),
                 title = "Source Port",
-                desc = "The opened FTP port of the source host"
-            ) { settingType = FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_PORT }
+                desc = "The opened FTP port of the source host",
+                value = ftpSettings.sourcePort.toString()
+            ) { settingType = SettingsViewModel.DialogEnum.DIALOG_SOURCE_PORT }
             SettingsCardText(
                 icon = painterResource(id = R.drawable.source_account_username),
-                title = "Source Account Username",
-                desc = "The authorized account username to login into the FTP server"
-            ) { settingType = FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_USERNAME }
+                title = "Source account Username",
+                desc = "The authorized account username to login into the FTP server",
+                value = ftpSettings.sourceUsername
+            ) { settingType = SettingsViewModel.DialogEnum.DIALOG_SOURCE_USERNAME }
             SettingsCardText(
                 icon = painterResource(id = R.drawable.source_account_password),
-                title = "Source Account Password",
-                desc = "The account password of said username"
-            ) { settingType = FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_PASSWORD }
+                title = "Source account Password",
+                desc = "The account password of said username",
+                value = "*".repeat(ftpSettings.sourcePassword.length)
+            ) { settingType = SettingsViewModel.DialogEnum.DIALOG_SOURCE_PASSWORD }
+            SettingsSectionText(text = "Storage")
+            SettingsCardText(
+                icon = painterResource(id = R.drawable.storage),
+                title = "App data location",
+                desc = "Where to save downloaded files",
+                value = "Real: ${storageSettings.appDataViewDir}\nUri: ${storageSettings.appDataUri}"
+            ) { viewModel.requestAppDataUri() }
         }
     })
-    val ftpSettings = viewModel.stateFlow.collectAsState()
     when (settingType) {
-        FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_HOST -> SettingInputDialog(text = "Source Host",
-            currentSettingValue = ftpSettings.value.sourceHost,
+        SettingsViewModel.DialogEnum.DIALOG_SOURCE_HOST -> SettingInputDialog(text = "Source Host",
+            currentSettingValue = ftpSettings.sourceHost,
             validator = SettingType.SourceHost.validator,
             onApply = {
                 viewModel.sourceHost(it)
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             },
             onDismiss = {
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             })
 
-        FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_PORT -> SettingInputDialog(text = "Source Port",
-            currentSettingValue = ftpSettings.value.sourcePort.toString(),
+        SettingsViewModel.DialogEnum.DIALOG_SOURCE_PORT -> SettingInputDialog(text = "Source Port",
+            currentSettingValue = ftpSettings.sourcePort.toString(),
             validator = SettingType.SourcePort.validator,
             onApply = {
                 viewModel.sourcePort(it.toInt())
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             },
             onDismiss = {
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             })
 
-        FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_USERNAME -> SettingInputDialog(text = "Source Username",
-            currentSettingValue = ftpSettings.value.sourceUsername,
+        SettingsViewModel.DialogEnum.DIALOG_SOURCE_USERNAME -> SettingInputDialog(text = "Source Username",
+            currentSettingValue = ftpSettings.sourceUsername,
             validator = SettingType.SourceUsername.validator,
             onApply = {
                 viewModel.sourceUsername(it)
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             },
             onDismiss = {
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             })
 
-        FtpSettingsViewModel.DialogEnum.DIALOG_SOURCE_PASSWORD -> SettingInputDialog(text = "Source Password",
-            currentSettingValue = ftpSettings.value.sourcePassword,
+        SettingsViewModel.DialogEnum.DIALOG_SOURCE_PASSWORD -> SettingInputDialog(text = "Source Password",
+            currentSettingValue = ftpSettings.sourcePassword,
             passwordInput = true,
             validator = SettingType.SourcePassword.validator,
             onApply = {
                 viewModel.sourcePassword(it)
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             },
             onDismiss = {
-                settingType = FtpSettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
+                settingType = SettingsViewModel.DialogEnum.DIALOG_NOT_SHOWN
             })
 
         else -> {}
@@ -137,6 +151,7 @@ fun SettingsPagePreview() {
         TopAppBar(title = { Text(text = "Settings") }, modifier = Modifier.fillMaxWidth())
     }, content = { padding ->
         Column(modifier = Modifier.padding(padding)) {
+            SettingsSectionText(text = "FTP")
             SettingsCardText(
                 icon = painterResource(id = R.drawable.source_host),
                 title = "Source Host",
@@ -156,6 +171,12 @@ fun SettingsPagePreview() {
                 icon = painterResource(id = R.drawable.source_account_password),
                 title = "Source Account Password",
                 desc = "The account password of said username"
+            ) {}
+            SettingsSectionText(text = "Storage")
+            SettingsCardText(
+                icon = painterResource(id = R.drawable.storage),
+                title = "App data location",
+                desc = "Where to save downloaded files"
             ) {}
         }
     })
@@ -187,10 +208,25 @@ fun SettingInputDialogPasswordPreview() {
     )
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SettingsSectionText(modifier: Modifier = Modifier, text: String) {
+    Text(
+        text = text,
+        fontSize = 18.sp,
+        fontWeight = FontWeight.Light,
+        color = Color.DarkGray,
+        modifier = modifier.padding(start = 10.dp, end = 10.dp, top = 10.dp, bottom = 5.dp)
+    )
+}
+
 @Composable
 fun SettingsCardText(
-    modifier: Modifier = Modifier, icon: Painter, title: String, desc: String, onClick: () -> Unit
+    modifier: Modifier = Modifier,
+    icon: Painter,
+    title: String,
+    desc: String,
+    value: String = "[Empty]",
+    onClick: () -> Unit
 ) {
     OutlinedCard(
         onClick = { onClick() },
@@ -198,28 +234,33 @@ fun SettingsCardText(
             .padding(horizontal = 10.dp, vertical = 5.dp)
             .fillMaxWidth()
     ) {
-        Row(
+        Column(
             modifier = modifier
                 .fillMaxWidth()
                 .padding(10.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalArrangement = Arrangement.spacedBy(5.dp)
         ) {
-            Icon(
-                painter = icon,
-                contentDescription = null,
-                modifier = modifier.padding(horizontal = 20.dp)
-            )
-            Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
-                Text(
-                    text = title,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = modifier
+            Row(
+                modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = icon,
+                    contentDescription = null,
+                    modifier = modifier.padding(horizontal = 20.dp)
                 )
-                Text(
-                    text = desc, fontSize = 14.sp, modifier = modifier
-                )
+                Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                    Text(
+                        text = title,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = modifier
+                    )
+                    Text(
+                        text = desc, fontSize = 14.sp, modifier = modifier
+                    )
+                }
             }
+            Text(text = value, fontSize = 14.sp, fontWeight = FontWeight.Light, modifier = modifier)
         }
     }
 }

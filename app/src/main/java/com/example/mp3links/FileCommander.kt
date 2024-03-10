@@ -1,9 +1,7 @@
 package com.example.mp3links
 
-import android.os.Environment
 import android.util.Log
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -19,27 +17,30 @@ class FileCommander(
     private val sourceIP: String,
     private val sourcePort: Int,
     private val username: String,
-    private val password: String
+    private val password: String,
+    private val settingsRepository: SettingsRepository
 ) {
-    constructor(ftpSettings: FtpSettings) : this(
+    constructor(ftpSettings: FtpSettings, settingsRepository: SettingsRepository) : this(
         ftpSettings.sourceHost,
         ftpSettings.sourcePort,
         ftpSettings.sourceUsername,
-        ftpSettings.sourcePassword
+        ftpSettings.sourcePassword,
+        settingsRepository
     )
 
     private val databaseFile = "database.json"
-    val appDataDirectory = Environment.getExternalStorageDirectory().toString()
-    private val dataSource by lazy { FTPDataSource(sourceIP, sourcePort, username, password) }
+    private val dataSource by lazy { FtpDataSource(sourceIP, sourcePort, username, password) }
     private var albumListSerialize: AlbumListSerialize? = null
     var albumList: List<Album>? = null
         private set
     private val fileAccessLock = ReentrantReadWriteLock()
+    private suspend fun getAppDataDirectory() = settingsRepository.getStorageSettings().appDataUri
+
     suspend fun retrieveDatabase(): AlbumListSerialize {
         Log.d(TAG, "retrieveDatabase: download database soon")
         // fake delay to test UI
-        delay(2000)
-        val localDatabaseFile = Path(appDataDirectory, databaseFile).toString()
+//        delay(2000)
+        val localDatabaseFile = Path(getAppDataDirectory(), databaseFile).toString()
         fileAccessLock.write {
             dataSource.retrieveFileAsync(
                 databaseFile, localDatabaseFile
@@ -79,13 +80,13 @@ class FileCommander(
     private suspend fun retrieveFile(path: String, progressListener: (Long, Long) -> Unit) {
         fileAccessLock.write {
             dataSource.retrieveFileAsync(
-                path, Path(appDataDirectory, path).toString(), progressListener
+                path, Path(getAppDataDirectory(), path).toString(), progressListener
             )
         }
     }
 
     private suspend fun isSongDownloaded(path: String): Boolean = withContext(Dispatchers.IO) {
-        Path(appDataDirectory, path).exists()
+        Path(getAppDataDirectory(), path).exists()
     }
 }
 
