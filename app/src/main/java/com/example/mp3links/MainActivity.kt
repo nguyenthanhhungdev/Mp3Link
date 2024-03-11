@@ -42,6 +42,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.mp3link.R
 import com.example.mp3links.ui.theme.MP3LinksTheme
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -51,11 +52,12 @@ import java.net.URLConnection
 
 private const val TAG = "MainActivity"
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private lateinit var songsViewModel: SongsViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val songsViewModel: SongsViewModel by viewModels { SongsViewModel.Factory }
+        val songsViewModel: SongsViewModel by viewModels()
         this.songsViewModel = songsViewModel
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.CREATED) {
@@ -64,18 +66,6 @@ class MainActivity : ComponentActivity() {
                 showNotifyToast(songsViewModel)
             }
         }
-//        var isFirstCreated = false
-//        lifecycleScope.launch {
-//            repeatOnLifecycle(Lifecycle.State.STARTED) {
-//                Log.d(TAG, "onCreate: repeatOnLifecycle STARTED")
-//                if (!isFirstCreated) {
-//                    Log.d(TAG, "onCreate: reload album list on activity start")
-//                    songsViewModel.reloadAlbumListTest(Helper.getFakeAlbumListString(this@MainActivity))
-//                    songsViewModel.reloadAlbumList()
-//                    isFirstCreated = true
-//                }
-//            }
-//        }
         setContent {
             MP3LinksTheme {
                 // A surface container using the 'background' color from the theme

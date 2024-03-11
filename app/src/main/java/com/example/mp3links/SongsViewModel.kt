@@ -7,10 +7,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.toMutableStateList
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.initializer
-import androidx.lifecycle.viewmodel.viewModelFactory
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -22,13 +20,17 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.io.IOException
+import javax.inject.Inject
 import kotlin.io.path.Path
 
 private const val TAG = "SongsViewModel"
 
-class SongsViewModel(private val settingsRepository: SettingsRepository) : ViewModel(),
-    DefaultLifecycleObserver {
-    private var fileCommander = FileCommander(FtpSettings.defaultValue, settingsRepository)
+@HiltViewModel
+class SongsViewModel @Inject constructor(
+    private val settingsRepository: SettingsRepository,
+    private val fileCommanderFactory: FileCommander.FileCommanderFactory
+) : ViewModel(), DefaultLifecycleObserver {
+    private var fileCommander: FileCommander = fileCommanderFactory.create(FtpSettings.defaultValue)
     private val _openGenericFileActivityLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
     val openGenericFileActivityLiveEvent = _openGenericFileActivityLiveEvent.receiveAsFlow()
     private val _showNotifyToastLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
@@ -43,7 +45,6 @@ class SongsViewModel(private val settingsRepository: SettingsRepository) : ViewM
     )
     private val _selectedAlbum = MutableStateFlow<Album?>(null)
     val selectedAlbum = _selectedAlbum.asStateFlow()
-
     fun setSelectedAlbum(album: Album) {
         if (_albums.contains(album)) {
             _selectedAlbum.value = album
@@ -63,11 +64,7 @@ class SongsViewModel(private val settingsRepository: SettingsRepository) : ViewM
             TAG,
             "ftpSettingsUpdated: reloading with new ftp settings ${settingsRepository.getFtpSettings()}"
         )
-        settingsRepository.getFtpSettings().run {
-            fileCommander = FileCommander(
-                sourceHost, sourcePort, sourceUsername, sourcePassword, settingsRepository
-            )
-        }
+        fileCommander = fileCommanderFactory.create(settingsRepository.getFtpSettings())
         reloadAlbumList()
     }
 
@@ -108,11 +105,12 @@ class SongsViewModel(private val settingsRepository: SettingsRepository) : ViewM
     }
 
     fun downloadSong(song: Song) = viewModelScope.launch {
-        _downloadingInformation.value = DownloadingInformation("Song", false)
+        _downloadingInformation.value = DownloadingInformation(song.path, false)
         _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_SONG
         try {
             Log.d(TAG, "downloadSong: $song")
             fileCommander.retrieveFile(song) { bytesSoFar, totalBytes ->
+                Log.d(TAG, "downloadSong: download progress report $bytesSoFar/$totalBytes bytes")
                 _downloadingInformation.value.bytesSoFar.value = bytesSoFar
                 _downloadingInformation.value.totalBytes.value = totalBytes
             }
@@ -125,25 +123,16 @@ class SongsViewModel(private val settingsRepository: SettingsRepository) : ViewM
         } finally {
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
         }
+        reloadAlbumList()
     }
 
     fun playSong(song: Song) = viewModelScope.launch {
         Log.d(TAG, "playSong: $song")
         _openGenericFileActivityLiveEvent.send(
             Path(
-                settingsRepository.getStorageSettings().appDataUri, song.path
+                settingsRepository.getStorageSettings().appDataDir, song.path
             ).toString()
         )
-    }
-
-    companion object {
-        val Factory: ViewModelProvider.Factory = viewModelFactory {
-            initializer {
-                val application =
-                    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as FtpComposeApplication)
-                SongsViewModel(application.settingsRepository)
-            }
-        }
     }
 }
 

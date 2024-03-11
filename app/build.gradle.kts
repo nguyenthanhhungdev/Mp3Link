@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlinx-serialization")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -32,6 +34,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -75,4 +78,11 @@ dependencies {
 
     implementation("commons-net:commons-net:3.10.0")
     implementation("com.anggrayudi:storage:1.5.5")
+
+    implementation("com.google.dagger:hilt-android:2.51")
+    kapt("com.google.dagger:hilt-android-compiler:2.51")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs_nio:2.0.4")
+}
+kapt {
+    correctErrorTypes = true
 }

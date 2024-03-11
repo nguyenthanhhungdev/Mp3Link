@@ -14,10 +14,11 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.serialization.Serializable
+import javax.inject.Inject
 
 private const val TAG = "FtpSettingsRepository"
 
-class SettingsRepository(private val dataStore: DataStore<Preferences>) {
+class SettingsRepository @Inject constructor(private val dataStore: DataStore<Preferences>) {
     val ftpSettingsFlow = dataStore.data.map { preferences ->
         FtpSettings(
             preferences[FtpSettings.sourceHostPreferencesKey] ?: FtpSettings.DEFAULT_SOURCE_HOST,
@@ -74,26 +75,22 @@ class SettingsRepository(private val dataStore: DataStore<Preferences>) {
 
     private val storageSettingsFlow = dataStore.data.map { preferences ->
         StorageSettings(
-            preferences[StorageSettings.appDataViewDirPreferencesKey]
-                ?: StorageSettings.DEFAULT_APPDATA_DIR,
-            preferences[StorageSettings.appDataUriPreferencesKey]
+            preferences[StorageSettings.appDataDirPreferencesKey]
                 ?: StorageSettings.DEFAULT_APPDATA_DIR
         )
     }.distinctUntilChanged()
 
     suspend fun getStorageSettings() = storageSettingsFlow.first()
-    suspend fun updateAppDataUriSettings(viewDir: String, uri: String) {
+    suspend fun updateAppDataUriSettings(dir: String) {
         saveStorageSettings(
-            getStorageSettings().copy(
-                appDataViewDir = viewDir, appDataUri = uri
-            )
+            getStorageSettings().copy(appDataDir = dir)
         )
     }
 
     private suspend fun saveStorageSettings(storageSettings: StorageSettings) {
         Log.d(TAG, "saveStorageSettings: saving with DataStore, value $storageSettings")
         dataStore.edit { settings ->
-            settings[StorageSettings.appDataViewDirPreferencesKey] = storageSettings.appDataViewDir
+            settings[StorageSettings.appDataDirPreferencesKey] = storageSettings.appDataDir
         }
     }
 }
@@ -157,11 +154,10 @@ sealed class SettingType {
 }
 
 @Serializable
-data class StorageSettings(val appDataViewDir: String, val appDataUri: String) {
+data class StorageSettings(val appDataDir: String) {
     companion object {
         const val DEFAULT_APPDATA_DIR = "/"
-        val defaultValue = StorageSettings(DEFAULT_APPDATA_DIR, DEFAULT_APPDATA_DIR)
-        val appDataViewDirPreferencesKey = stringPreferencesKey("appdata_viewdir")
-        val appDataUriPreferencesKey = stringPreferencesKey("appdata_uri")
+        val defaultValue = StorageSettings(DEFAULT_APPDATA_DIR)
+        val appDataDirPreferencesKey = stringPreferencesKey("appdata_dir")
     }
 }

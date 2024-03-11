@@ -1,23 +1,22 @@
 package com.example.mp3links
 
-import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.initializer
-import androidx.lifecycle.viewmodel.viewModelFactory
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 private const val TAG = "SettingsViewModel"
 
-class SettingsViewModel(private val settingsRepository: SettingsRepository) : ViewModel() {
+@HiltViewModel
+class SettingsViewModel @Inject constructor(private val settingsRepository: SettingsRepository) :
+    ViewModel() {
     private val _openUserSelectAppDataUriActivityLiveEvent =
         Channel<String>(capacity = Channel.BUFFERED)
     val openUserSelectAppDataUriActivityLiveEvent =
@@ -71,25 +70,13 @@ class SettingsViewModel(private val settingsRepository: SettingsRepository) : Vi
     }
 
     fun requestAppDataUri() = viewModelScope.launch {
-        _openUserSelectAppDataUriActivityLiveEvent.send(settingsRepository.getStorageSettings().appDataViewDir)
+        _openUserSelectAppDataUriActivityLiveEvent.send(settingsRepository.getStorageSettings().appDataDir)
     }
 
-    fun appDataPath(viewDir: String, uri: Uri) = viewModelScope.launch {
-        Log.d(TAG, "appDataUri: update setting to $uri ($viewDir)")
-        settingsRepository.updateAppDataUriSettings(
-            viewDir, uri.toString()
-        )
+    fun appDataDir(dir: String) = viewModelScope.launch {
+        Log.d(TAG, "appDataUri: update setting to $dir")
+        settingsRepository.updateAppDataUriSettings(dir)
         _storageSettingsFlow.value = getStorageSettings()
-    }
-
-    companion object {
-        val Factory: ViewModelProvider.Factory = viewModelFactory {
-            initializer {
-                val application = (this[APPLICATION_KEY] as FtpComposeApplication)
-                SettingsViewModel(application.settingsRepository)
-            }
-        }
-
     }
 
     enum class DialogEnum {

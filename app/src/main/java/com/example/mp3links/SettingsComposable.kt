@@ -88,7 +88,7 @@ fun SettingsPage(viewModel: SettingsViewModel) {
                 icon = painterResource(id = R.drawable.storage),
                 title = "App data location",
                 desc = "Where to save downloaded files",
-                value = "Real: ${storageSettings.appDataViewDir}\nUri: ${storageSettings.appDataUri}"
+                value = storageSettings.appDataDir
             ) { viewModel.requestAppDataUri() }
         }
     })
