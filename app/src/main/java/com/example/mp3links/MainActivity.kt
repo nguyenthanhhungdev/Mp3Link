@@ -1,7 +1,6 @@
 package com.example.mp3links
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.webkit.MimeTypeMap
@@ -91,10 +90,10 @@ class MainActivity : ComponentActivity() {
             startActivity(Intent(Intent.ACTION_VIEW).apply {
                 val file = File(path)
                 FileProvider.getUriForFile(
-                    this@MainActivity, "${applicationContext.packageName}.fileprovider", file
+                    this@MainActivity, "com.example.mp3link.fileprovider", file
                 ).let {
                     setDataAndType(
-                        Uri.fromFile(file),
+                        it,
                         MimeTypeMap.getSingleton().getMimeTypeFromExtension(file.extension)
                             ?: URLConnection.guessContentTypeFromName(file.name)
                     )
@@ -136,7 +135,8 @@ fun MP3LinksScreen(viewModel: SongsViewModel) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            AlbumList(albums = viewModel.albums,
+            val albums by viewModel.albums.collectAsState()
+            AlbumList(albums = albums,
                 selectedAlbumState = viewModel.selectedAlbum,
                 onAlbumChange = { viewModel.setSelectedAlbum(it) },
                 onAlbumReload = { coroutineScope.launch { viewModel.reloadAlbumList() } })

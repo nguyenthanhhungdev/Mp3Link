@@ -152,8 +152,7 @@ fun AlbumList(
                 modifier = modifier
             ) {
                 val selectedAlbum by selectedAlbumState.collectAsState(null)
-                TextField(
-                    value = selectedAlbum?.name ?: "No album",
+                TextField(value = selectedAlbum?.name ?: "No album",
                     onValueChange = {},
                     readOnly = true,
                     trailingIcon = {
@@ -178,7 +177,12 @@ fun AlbumList(
                     expanded = menuExpanded,
                     onDismissRequest = { menuExpanded = false }) {
                     albums.forEach { album ->
-                        DropdownMenuItem(text = { Text(text = album.name) }, onClick = {
+                        DropdownMenuItem(text = {
+                            Text(
+                                text = album.name,
+                                color = if (album === selectedAlbum) Color.Gray else Color.Unspecified
+                            )
+                        }, onClick = {
                             menuExpanded = false
                             onAlbumChange(album)
                         })
@@ -233,9 +237,10 @@ fun DownloadingDialog(
                 if (information.text.isNotBlank()) Text(
                     text = information.text, modifier = modifier
                 )
+                val progress = bytesSoFar.toFloat().div(totalBytes)
                 if (totalBytes != 0L) {
                     Text(
-                        text = "$bytesSoFar/$totalBytes",
+                        text = "$bytesSoFar/$totalBytes (${"%.2f".format(progress * 100)})",
                         fontSize = 12.sp, color = Color.Gray,
                         modifier = modifier.align(Alignment.End),
                     )

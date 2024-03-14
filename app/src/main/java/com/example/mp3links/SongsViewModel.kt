@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.toMutableStateList
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -35,9 +34,8 @@ class SongsViewModel @Inject constructor(
     val openGenericFileActivityLiveEvent = _openGenericFileActivityLiveEvent.receiveAsFlow()
     private val _showNotifyToastLiveEvent = Channel<String>(capacity = Channel.BUFFERED)
     val showNotifyToastLiveEvent = _showNotifyToastLiveEvent.receiveAsFlow()
-    private val _albums = listOf<Album>().toMutableStateList()
-    val albums: List<Album>
-        get() = _albums
+    private val _albums = MutableStateFlow(listOf<Album>())
+    val albums = _albums.asStateFlow()
     private val _downloadingInformation = MutableStateFlow(DownloadingInformation())
     val downloadingInformation = _downloadingInformation.asStateFlow()
     private val ftpSettings: StateFlow<FtpSettings> = settingsRepository.ftpSettingsFlow.stateIn(
@@ -46,7 +44,7 @@ class SongsViewModel @Inject constructor(
     private val _selectedAlbum = MutableStateFlow<Album?>(null)
     val selectedAlbum = _selectedAlbum.asStateFlow()
     fun setSelectedAlbum(album: Album) {
-        if (_albums.contains(album)) {
+        if (_albums.value.contains(album)) {
             _selectedAlbum.value = album
             // fetch songs here
         } else Log.wtf(TAG, "Selecting non-exist album")
@@ -93,15 +91,20 @@ class SongsViewModel @Inject constructor(
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
         }
         Log.v(TAG, "reloadAlbumList: adding ${fileCommander.albumList?.size} albums")
-        _albums.clear()
-        fileCommander.albumList?.let { _albums.addAll(it) }
+        repopulateUiAlbumList()
+    }
+
+    private fun repopulateUiAlbumList() {
+        fileCommander.albumList?.let {
+            _selectedAlbum.value = null
+            _albums.value = it
+            if (_albums.value.isNotEmpty()) setSelectedAlbum(_albums.value.first())
+        }
     }
 
     suspend fun reloadAlbumListTest(string: String) {
         fileCommander.retrieveDatabaseTest(string)
-        _albums.clear()
-        fileCommander.albumList?.let { _albums.addAll(it) }
-        if (_albums.size > 0) setSelectedAlbum(_albums.first())
+        repopulateUiAlbumList()
     }
 
     fun downloadSong(song: Song) = viewModelScope.launch {
@@ -110,7 +113,6 @@ class SongsViewModel @Inject constructor(
         try {
             Log.d(TAG, "downloadSong: $song")
             fileCommander.retrieveFile(song) { bytesSoFar, totalBytes ->
-                Log.d(TAG, "downloadSong: download progress report $bytesSoFar/$totalBytes bytes")
                 _downloadingInformation.value.bytesSoFar.value = bytesSoFar
                 _downloadingInformation.value.totalBytes.value = totalBytes
             }
@@ -123,7 +125,15 @@ class SongsViewModel @Inject constructor(
         } finally {
             _downloadingInformation.value.state.value = DownloadingState.DOWNLOADING_NOT_DOWNLOADING
         }
-        reloadAlbumList()
+        _albums.value = albums.value.map { album ->
+            if (album === selectedAlbum.value) {
+                album.copy(songs = selectedAlbum.value!!.songs.map { oldSong ->
+                    if (oldSong === song) song.copy(
+                        downloaded = fileCommander.isSongDownloaded(song.path)
+                    ) else oldSong
+                }).also { _selectedAlbum.value = it }
+            } else album
+        }
     }
 
     fun playSong(song: Song) = viewModelScope.launch {
